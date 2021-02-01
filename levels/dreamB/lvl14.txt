@@ -1,0 +1,108 @@
+32;50
+06;46
+06;46
+06;46
+29;08
+null;null;null;lvl16
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMM      MMMMMM
+MMMMMMMMMMVVMNMMMMMM            
+MMMMMMMMMM  VNVVVVVV            
+MMMMMM.VVV   N                  
+MMMMMM.      N                  
+MMMMMM.      N                  
+MMM          N       AAAAAAMMMMM
+MMM          N       NNNNNNNNMMM
+MMM          N              MMMM
+MMM          N        AAAA    MM
+MMM          N       ,DDDD    MM
+MMM                  ,DDDD    MM
+MMM                  ,DDDD    MM
+MMMAA                ,DDDD    MM
+MMMMM                ,DDDD    MM
+MMMMM                         MM
+MMMMM                        AMM
+MMMMM             A         ,MMM
+MMMMM             N         ,MMM
+MMMMMA            N         ,MMM
+MMMMMM.           N         ,MMM
+MMMMMM.           N         ,MMM
+MMMMMM.           N         ,OOO
+MMMMMM.                     ,OOO
+MMMMMM.               AAAAAAAOOO
+MMMMMM.               NNNNNNNNOO
+MMMMMM.                   OOOOOO
+MMMMMM.                   OOOOOO
+MMMMMM.                     ,OOO
+MMMMMM.    AA               ,OOO
+MMVVVV    ,OO               ,OOO
+MM.       ,OO               ,OOO
+MM.       ,OO      AAAA     ,OOO
+MM.       ,OO     ,DDDD     ,OOO
+MM.        VO     ,DDDD      ,OO
+MM.         V     ,DDDD      ,OO
+MMA               ,DDDD       VV
+MMM               ,DDDD         
+MMM               ,DDDD         
+MMM                             
+MMM        A                    
+MMM        N.                   
+MMM        N.                   
+MMM        N.                   
+MMM-----OOON.                   
+MMM     OOON.                   
+MMM     OOON.                   
+MMM     OOON.                   
+bg
+OOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOOOOOMMMM      MMMMMMMM
+OOOOOOOOOOOOOOM           MMMMMM
+OOOOOOOOOOOOOO             MMMMM
+OOOOOOOO  OOOO             MMMMM
+OOOOOO      OO              MMMM
+OOOOO                       MMMM
+OOOOO                        MMM
+OOOOO                        MMM
+OOOOO                        MMM
+OOOOOO                       MMM
+OOOOOOO                      MMM
+OOOOOOO                      MMM
+OOOOOOO                      MMM
+OOOOOOOOO                    MMM
+OOOOOOOOOO                   MMM
+OOOOOOOOOOOOOO            OOOOOO
+OOOOOOOOOONOO             OOOOOO
+OOOOOOOO  N            OOOOOOOOO
+MMMMMM    N            OOOOOOOOO
+MMMMM     NNNNNNNNNNNNNNOOOOOOOO
+MMMMM     N            OOOOOOOOO
+MMMMMM    N            OOOOOOOOO
+MMMMMM    N            OOOOOOOOO
+MMMAMMM   N            OOOOOOOOO
+MMMMMMMMM N           OOOOOOOOOO
+MMMMMMMMMMN           OOOOOOOOOO
+MMMMMMMMMMN          OOOOOOOOOOO
+MMMMMMM   N          OOOOOOOOOOO
+MMMMMM    N          OOOOOOOOOOO
+MMMMMNNNNNN         OOOOOOOOOOOO
+MMMMMM    N         OOOOOOOOOOOO
+MMMMM     N        OOOOOOOOOOOOO
+MMM       N        OOOOOOOOOOOOO
+MMM       N         OOOOOOOOOOOO
+MM        N          OOOOOOOOOOO
+MM       MNM            OOOOOOOO
+MM      MMMMMMM          OOOOOOO
+MM  MMMMMMMMMMM           OOOOOO
+MMMMMMMMMMMMMMMM          OOOOOO
+MMMMMMMMMMMMMMMMMMM       OOOOOO
+MMMMMMMMMMMMMMMMMMMMM      OOOOO
+MMMMMMMMMMMMMMMMMMMMM        OOO
+MMMMMMMMMMMMMMMMMMMM         OOO
+MMMMMMMMMMMMMMMMM            OOO
+MMMMMMMMMMMMMMMMM            OOO
+2;15;26

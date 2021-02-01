@@ -1,0 +1,20 @@
+XXXXXXXXXXXXXXXXXXXXXXX
+
+[prologue:madeline:0]
+
+Hey, I think I'm
+getting the
+hang of this!
+end
+
+[prologue:madeline:0]
+
+I think I can
+do this now!
+end
+
+[prologue:madeline:1]
+
+As long as she doesn't
+show up again
+end

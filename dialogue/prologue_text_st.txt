@@ -1,0 +1,24 @@
+XXXXXXXXXXXXXXXXXXXXXXX
+
+[prologue:madeline:3]
+
+You can do this.$
+end
+
+[prologue:madeline:3]
+You've done this
+before.    
+
+You can do it again.
+end
+
+[prologue:madeline:3]
+
+...
+end
+
+
+[prologue:madeline:1]
+
+I hope.
+end

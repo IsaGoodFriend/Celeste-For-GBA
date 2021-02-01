@@ -1,0 +1,52 @@
+32;22
+26;16
+26;16
+26;16
+26;16
+null;null;null;lvl7
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMDD       MMMMMMMMMMMMMMMMM
+MMM   DD         MMMMMMMMMMMMMMM
+MM    DD                  MMMMMM
+MM    DD                  MMMMMM
+MM    DD                  MMMMMM
+MM    DD                     MMM
+MM    DD                     MMM
+      DD    AA                MM
+      DD    DD      AA        MM
+      DD    DD      DD       NNN
+            DD      DD          
+            DD      DD          
+                    DD          
+                    DD     8    
+                    DD -----NNNN
+                    DD      MMMM
+                            MMMM
+                             MMM
+                             MMM
+                             MMM
+bg
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMM    MMMMMMMMMMMMMMM
+MMMMMMMMMMMM         MMMMMMMMMMM
+MMMMMMMMM              MMMMMMMMM
+MMMMMMMMM               MMMMMMMM
+MMMMMMMM                 MMMMMMM
+MMMMMMMM                 MMMMMMM
+MMMMM}    !MMM             MMMMM
+          MMMMM              [MM
+          MMMMM               MM
+          MMMMMM2               
+          MMMMMMMMMMMMMMM       
+           MMMMMMMMMMMMMMMMM    
+               MMMMMMMMMMMMMM   
+                  MMMMMMMMMMMMMM
+                  MMMMMMMMMMMMMM
+                 #MMMMMMMMMMMMMM
+                 MMMMMMMMMMMMMMM
+              MMMMMMMMMMMMMMMMMM
+              MMMMMMMMMMMMMMMMMM
+1;03;05;1

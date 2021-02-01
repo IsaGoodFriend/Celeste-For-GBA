@@ -1,0 +1,61 @@
+32;25
+05;09
+05;09
+05;09
+05;09
+lvl6;null;null;null
+OO     OOOOOOOOOOOOOOOOOOOOOOOOO
+OO     OOOOOOOOOOOOOOOOOOOOOOOOO
+OO     OOOO       (OOOOOOOOOOOOO
+OO                 OOOO]   OOOOO
+OO                         OOOOO
+OO1                         OOOO
+OOO                         OOOO
+OOO                         OOOO
+OOOO          OOOO           OOO
+OOOO----      OOO            OOO
+OOOO          OO            AOOO
+OOOO           O            OOOO
+OOOO                        OOOO
+OOOO                        OOOO
+OOOO                         OOO
+OOOO                         OOO
+OOOO                          OO
+OOOO                          OO
+OOO                           OO
+OOO                           OO
+OOO                           OO
+OOO                             
+OO                              
+OO                              
+OO                              
+bg
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOO 0  OOOOOOOOOOOOOOOOOOOOOOOOO
+OO9     ) OOOOOOOOO   {OOOOOOOOO
+OO         OOOOOOO      OOOOOOOO
+OO         OOOOOOO         (OOOO
+OOOO       OOOOOOOO          OOO
+OOOO       OOOOOOOO          OOO
+OOOO         OOOOOO         AOOO
+OOOO           OOOO         OOOO
+OOOOO4         OOO          OOOO
+OOOOOOOO3  5  $OOO          OOOO
+OOOOOOOOOOOOOOOOO           OOOO
+OOOOOOOOOOOOOOOOOO          OOOO
+OOOOOOOOOOOOOOOOOOOOOO1   OOOOOO
+OOOOOOOOOO    OOOOOOOOOOOOOOOOOO
+OOOOOO}             {OOOOOOOOOOO
+OOOO]                  OOOOOOOOO
+OOOO                    OOOOOOOO
+OOO                     OOOOOOOO
+OOO                      OOOOOOO
+OO                        OOOOOO
+                            OOOO
+1;15;05;0
+2;08;14
+2;15;16
+7;22;18

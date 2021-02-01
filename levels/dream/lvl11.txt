@@ -1,0 +1,51 @@
+64;22
+03;08
+03;08
+61;19
+58;06
+lvl15;null;lvl14;lvl11_berry
+MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
+MMMMMMMMMMMMMMMMMNNNNNNNNNNNOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
+MMMMMMMMMMMMMMMMMN         OOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
+         MMMMMMMMN         OOOOOOMMMMMMMMMMMMMMMMMMOOOOOO    MMM
+         MMMMMMMMN         OOOOOOOMMMMMMMMMMMMMOOOOOOOOOO    MMM
+          MMMMMMMN         OOOOOOOMMMMMMMMMM     OOOOOOOO    MMM
+           MMMMMMN         OOOO.     MMMMMM          OOOO--- MMM
+           MMMMMMN         OOOO.     MMMMMM           OOO    MMM
+MMMMM           MN         DDDD.     MMMMMM           OOO    MMM
+MMMMM            NAAAA     DDDD.       MMMM                  MMM
+MMMMM            NDDDD.    DDDD.       DDD.                  MMM
+MMM              NDDDD.    DDDD.       DDD.                  MMM
+MM                         VVVV        DDD.                  MMM
+MM                                     DDD.                  MMM
+MM       AAA                           DDD.                     
+MM       DDD.                          DDD.           OOOO      
+MM       DDD.                          VVV          OOOOOO      
+MM       DDD.                                       OOOOOOO     
+MM                                                  OOOMMOO     
+MM                                                  MMMMMMMMMMMM
+MM                                                  MMMMMMMMMMMM
+MM                                                  MMMMMMMMMMMM
+bg
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MMM    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MMM    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
+MM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOO        
+MM      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOO      
+MM        MMMMMMMMMMMMMMMMMMMMMMMM   MMMMMOO   OOOOOOOOOOOOOOOOO
+MM           MMMMMMMMMMMMMMMMMMM                OOOOOOOOOOOOOOOO
+MM           MMMMMMMMMMMMMMMMMMM                  OOOOOOOOOOOOOO
+MM            MMMMMMMMMMMMMMMMMM                          OOOOOO
+MM              MMMMMMMMMMMMMMM                             OOOO
+MMM              MMMMMMMMMM                                  MMM
+MMMMM            MMMMMMMMM                                    MM
+MMMMM           MMMMMMMMMM                                  MMMM
+MMMMM       MMMMMMMMMMMMMMMMM                            MMMMMMM
+MMMMMMM   MMMMMMMMMMMMMMMMMMMMMMM                        MMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                       MMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                      MMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        MMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        MMM

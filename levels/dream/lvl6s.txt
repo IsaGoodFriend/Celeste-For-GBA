@@ -1,0 +1,55 @@
+48;22
+44;15
+44;15
+44;15
+44;15
+null;null;null;lvl6
+OOOOOOOOOMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+OOOOOOOOOOMMMMMMMMM            MMMMMMMMMMMMMMMMM
+OOOOO] {OOOMMMMMMM               MMMMMMM   MMMMM
+OOOOO   OOOM                     MMMMM      MMMM
+OOOOO   [OOO                                MMMM
+OOOO)    OOO                                MMMM
+OOO9     OO           5                     MMMM
+OOO      OO          OOO                    MMMM
+OOO      OO          OOOOO                  MMMM
+OOO      O}          OOOOO                  MMMM
+OOO      0           OOMMM                      
+OOO                  MMMMM                      
+OOO                  MMMM                       
+OOO                  MMM                        
+OOO                  MMM                  --MMMM
+OO                   MMMAA                  MMMM
+OO                   MMMMM                  MMMM
+OO                  AMMMMM                   MMM
+O                   MMMMMM                   MMM
+                    MMMMM                    MMM
+                    MMMMM                    MMM
+bg
+OOOOOOOOOOO                            MMMMMMMMM
+OOOOOOOOOOO                            MMMMMMMMM
+OOOOOOOOOOO                            MMMMMMMMM
+OOOOOOOOOOO                                MMMMM
+OOOOOOOOOOO                                 MMMM
+OOOOOOOOOOO                                 MMMM
+OOOOOOOOOOOO                                MMMM
+OOOOOOOOOOOO                                MMMM
+OOOOOOOOOOOO6                               MMMM
+OOOOOOOOOOOOOO                 $OOOOO        MMM
+OOOOOOOOOOOOOO                OOOOOOOO       MMM
+OOOOOOOOOOOOOO4               OOOOOOOO       MMM
+OOOOOOOOOOOOOOOOO             OOOOOOOO        MM
+OOOOOOOOOOOOOOOOO            !OOOOOOOOO1 2    MM
+OOOOOOOOOOOOOOOOO            OOOOOOOOOOOOO    MM
+    {OOOOOOOOOOOO            OOOOOOOOOOOOOOOOMMM
+       OOOOOOOOOO           OOOOOOOOOOOOOOOOOMMM
+       OOOOOOOOO            OOOOOOOOOOOOOOOOOMMM
+       [OOOOOOO}            OOOOOOOOOOOOOOOOOMMM
+         []OOOO             OOOOOOOOOOOOOOOOOMMM
+                            OOOOOOOOOOOOOOOOOMMM
+                            OOOOOOOOOOOOOOOOOMMM
+2;31;11
+2;14;14
+2;05;14
+1;05;08;0

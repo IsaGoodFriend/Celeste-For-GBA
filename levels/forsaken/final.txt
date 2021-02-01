@@ -1,0 +1,31 @@
+32;22
+07;18
+07;18
+07;18
+07;18
+null;null;null;null
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                              M
+M                          MMMMM
+M             MMMMM      MMMMMMM
+M             MMMMMMMMMMMMMMMMMM
+M         MMMMMMMMMMMMMMMMMMMMMM
+MMMM------MMMMMMMMMMMMMMMMMMMMMM
+MMMM      MMMMMMMMMMMMMMMMMMMMMM
+MMMM      MMMMMMMMMMMMMMMMMMMMMM
+MMMM      MMMMMMMMMMMMMMMMMMMMMM
+10;15;00
+1;04;10;3
+1;10;10;2

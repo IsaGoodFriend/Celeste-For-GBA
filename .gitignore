@@ -1,0 +1,15 @@
+/build/
+/output/
+/edited*.txt
+/sprites/
+/bgtiles/
+/maxmod_data/
+/transitions/
+/gb music/
+
+/Makefile
+
+*.pnproj
+*.pnps
+*.elf
+*.gba

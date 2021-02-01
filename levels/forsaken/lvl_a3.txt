@@ -1,0 +1,51 @@
+32;22
+03;16
+28;08
+03;16
+03;16
+null;null;lvl_a2;lvl_a4
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMXXXMMMMMMMMX     MMMMM
+MMMMMMMMMMXXXXXXXXXX         MMM
+MMMMMMM   XXXXXXX               
+MMMM         XXX                
+MM            XX                
+MM                              
+MM                          OMMM
+MM                          OMMM
+MM         AA               OMMM
+MM         MM               MMMM
+           MO               XXMM
+           OO                XMM
+           OO                XMM
+           OM           -----MMM
+MMOOOO     OMAA              MMM
+MMMOOO     MMMM             XXMM
+MMMMMM     MMMM             XXXX
+MMMMMM     MMMM             XXXX
+MMMMMM     MMMM              XXX
+MMMMMM     MMMM              XXX
+bg
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMM    MMMMMMM    MMMMMMM
+MMMMMMMMMM                 MMMMM
+MMMMMMM                    MMMMM
+MMMM                       MMMMM
+MM                         MMMMM
+MM                         MMMMM
+MM                          MMMM
+MM                          MMMM
+MM       MMM                MMMM
+MMMMM    MMMM               MMMM
+MMMMMMMMMMMMM                MMM
+MMMMMMMMMMMMM                MMM
+MMMMMMMMMMMMM              MMMMM
+MMMMMMMMMMMMM           MMMMMMMM
+MMMMMMMMMMMMM           MMMMMMMM
+MMMMMMMMMMMMMMM         MMMMMMMM
+MMMMMMMMMMMMMMM         MMMMMMMM
+MMMMMMMM   MMMM           MMMMMM
+MMMMMM     MMMM           MMMMMM
+MMMMMM     MMMM             MMMM

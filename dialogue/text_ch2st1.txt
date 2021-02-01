@@ -1,0 +1,13 @@
+XXXXXXXXXXXXXXXXXXXXXXX
+
+[prologue:madeline:0]
+
+Thank goodness for
+these clouds.
+end
+
+[prologue:madeline:1]
+
+It was getting quite
+hot out here.
+end

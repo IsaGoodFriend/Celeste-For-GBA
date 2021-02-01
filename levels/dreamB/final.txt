@@ -1,0 +1,53 @@
+54;22
+3;15
+3;15
+3;15
+3;15
+null;null;lvl15;null
+MMMMMM                                   MMMMMM       
+MMMMMM             AA                    MMMMMM       
+MMMMMM            ,EE                    MMMMMM       
+MMMMMM            ,EE                    MMMMMM       
+MMMMMM            ,EE                    MMMMM.       
+MMMMM             ,EE              AAA   MMMMM.       
+MMM               ,EE             ,DDD.  ,MMOO.       
+MMM               ,EE             ,DDD.  ,OOOO.       
+MMM                   AAAAAA      ,DDD.  ,OOOO.       
+MMM                   NNNNNN      ,DDD.  ,OOOO.       
+           AAAAAAAA   OOOOON      ,DDD.   ,OOOAAAAAA  
+           DDDDDDQQ   OOOOON      ,DDD.   ,OOOODDDDD  
+           DDDDDDQQ   OOOOON      ,QQQ.   ,OOOODDDDD  
+           DDDDDDQQ   OOO  N      ,QQQ.   ,EEE.       
+           VVVVVVVV   OO   N              ,EEE.       
+MMMMMM                OO   N              ,EEE.       
+MMMMMM                     N              ,EEE.       
+MMMMMM                                    ,EEE.       
+MMMMMM                                    ,EEE.       
+MMMM                                      ,EEE.       
+MMMM                                                  
+MMMM                                                  
+bg
+MMMMMM                                   MMMMMM       
+MMMMMM                                   MMMMMM       
+MMMMMM            OOO                    MMMMMM       
+MMMMMM            OOOO                   MMMMMM       
+MMMMMM           OOOOO                   MMMMM        
+MMMMM            OOOOOO                  MMMMM        
+MMM             OOOOOOOO                  MMMM        
+MMM             OOOOOOOO                  MMMM        
+MMM             OOOOOOOO                  MMMOOO      
+MMM             OOOOOOOONNNN              MMMOOOO     
+                  OOOOOOOOON               MMOOOO     
+                    OOOOOOON               MMOOOOO    
+                    OOOOOOON             OOOOOOOOOO   
+                     OOOOOON           OOOOOOOOOOOO   
+                     OOOOOOOO        OOOOOOOOOOOOOO   
+MMMMMM               OOOOOOOOO       OOOOOOOOOOOOOO   
+MMMMMM              OOOOOOOOOO        OOOOOOOOOOOOO   
+MMMMMMM            OOOOOOOOOOO        OOOOOOOOOOOO    
+MMMMMMM            OOOOOOOOOOOO         OOOOOOOOOO    
+MMMMMMMM           OOOOOOOOOOOO         OOOOOOOOO     
+MMMMMMMM            OOOOOOOOOOO         OOOOOOOO      
+MMMMMMMM            OOOOOOOOOOO         OOOOOOOO      
+9;49;02
+2;48;15

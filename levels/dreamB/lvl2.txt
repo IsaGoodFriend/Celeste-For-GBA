@@ -1,0 +1,51 @@
+32;22
+29;07
+05;18
+05;18
+05;18
+null;lvl1;null;lvl4
+                         MMMMMMM
+                         MMMMMMM
+                                
+                                
+              AA                
+             ,MN                
+        A    ,MN                
+        N    ,MN           NNNNN
+        N    AMN           NMMMM
+AA      N    MMN    AAA    NMMMM
+MM      N    MMN    OOO    NMMMM
+MM      NA   MMN    OOO    NMMMM
+MM      NO   MMN    OMM    VVVMM
+MM     ANO   NNN    MMMAA     MM
+MM     ONO          MMMMM     MM
+MM     OOO       AAAMMMMM     MM
+MM     OOO       MMMMMMMM     MM
+MM     OOO       OMMMMMMM     MM
+MM  ---OOO       OOMMM      --MM
+MM     OOO       OOMMM        MM
+MM     OOO       OOMMM        MM
+MM     OOOAAAAAAAOOMMMAAAAAAAAMM
+bg
+                         MMMMMMM
+                         MMMMMMM
+                          MMMMMM
+                           MMMMM
+                           MMMMM
+                            MMMM
+              MM            MMMM
+              MM           MMMMM
+        O     MM           MMMMM
+        O     MM           MMMMM
+        O    MMM           MMMMM
+        O    MMM    MMM    MMMMM
+        O    MMM    MMM    MMMMM
+        O    MMM    MMM       MM
+        ONNNNNN     MMM       MM
+       OOO    N     MMMMM     MM
+MMMM   OOO    N     MMMMM    MMM
+MMMMMMMOOO    NNNNMMMMMMMMMMMMMM
+MMMMMMMOOO    NMMMMMMMMMMMMMMMMM
+MMMMMMMOONNNNNNMMMMMMMMMMMMMMMMM
+MMMMMMMOOO    NMMMMMMMMMMMMMMMMM
+MMMMMMMOOO    NMMMMMMMMMMMMMMMMM

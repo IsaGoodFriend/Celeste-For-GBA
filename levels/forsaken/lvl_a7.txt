@@ -1,0 +1,68 @@
+32;30
+04;26
+28;09
+04;26
+04;26
+null;null;lvl_a8;lvl_a9
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMM         MMMMMMMMMMMMMMM
+MMMMMMMM         MMMMMMMMMMMMMMM
+MMMM             MMMMMMMMM      
+MMMM             MMMMMM         
+MMMM             MMMMM          
+MMMM             MMMMM          
+MMM.      OON    MMMMM          
+MMM.      OON    MMMMM     OOOMM
+MMM.   ---MMN    MMMMNNN   OOMMM
+MMM.      ,MN     MMMMMN   MOMMM
+MMM.      ,MN     MMMMMN   OOMMM
+MMM.      ,MN        MMN   OOMMM
+MMM.      ,MN        MMN   MMMMM
+MMM.      ,MN        MMN   MMMMM
+MMM.      ,MN        MMN   OOMMM
+MMM.      ,MN         MN   OOMMM
+MMM.      ,MN         MN   MOMMM
+MMM.      OMN          N   OOMMM
+MMM.      OMN              OMMMM
+          OMN              OMMMM
+          MMNAAAA          OOMMM
+          MMNMMMM           ,MMM
+        OOOMMMMMM           ,MMM
+        MOMMMMMMM           ,MMM
+MMOOOMMOOMMMMMMMM           ,MMM
+MMMMMMMMMMMMMMMMM           ,MMM
+MMMMMMMMMMMMMMMMM           ,MMM
+MMMMMMMMMMMMMMMMM           ,MMM
+bg
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMM                 MMMMMMMMMMM
+MMMMM                MMMMMMMMMMM
+MMMMMMM              MMMMMMMMMMM
+MMMMMMMMMMM        MMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMNNNNNNNNMMMMMMMMMMMM         
+MMMMMMMMMMMMMMMMMMMMMMM         
+MMMMMMMMMMMMMMMMOOOOOOO         
+MMMMMMMMMMMMOOOOO               
+MMM     MMMMOO                  
+MMM                             
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+5;03;16;06;3

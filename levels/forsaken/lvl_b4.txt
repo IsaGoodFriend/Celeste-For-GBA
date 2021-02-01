@@ -1,0 +1,56 @@
+123;22
+03;15
+120;15
+03;15
+03;15
+null;null;lvl_b3;lvl_b5
+MMMM                                                                                                                   MMMM
+MMMO                                                                                                                   OMMM
+MMMO                                                                                                                   MMMM
+MMMM                                                                                                                   MMMM
+MMMO                                                                                                                   OMMM
+MMM                                                                                                                    OMMM
+MMM                                                                                                                    MMMM
+MMO                                                                                                                    OMMM
+MMO                                                                                                                     MMM
+MMM                                                                                                                      OO
+MOO                                                                                                                      OO
+                                                                                                                           
+                                                                                                                           
+                                                            AAAAAAAA                                                       
+                                                            OMMMOOMMAAA                                                    
+MMMMM                    XX            XX                AAAMMMMMMMMOMO                  XX                            MOOM
+MMMMM                    MX            XXX               OMMOOMM                        XXM                OOMOMO      OMMM
+MMMMO                   XOM            XXO                                              MMOX               MMMMMM      MMMM
+MMMM                  XXXMM            XMM                                            XXMMMX                MMMMO      OMMM
+MMMM                 XXXXMM           XXM                                           XXXXOMMX                MMM         MMM
+MMO                  XXXOMO           XXMM                                          XXXXMMMX                            MMM
+MMM                  XXXMMO           XXOM                                          XXXXOMMX                            MMM
+bg
+                                                                                                                           
+                                                                                                                           
+                                                                                                                           
+                                                                                                                           
+                                                                                                                           
+                                                                                                                           
+                                                                                                                           
+MMM                                                                                                                        
+MMMM                                                                                                                       
+MMMO                                                                                                                    MMM
+MMMMM                                                                                                                   MMM
+MMMMM                                                       MMOOOMMMMOM                                                 MMM
+MMMMO                                                       OMMMMMMMMMMMMOO                                MMMMMMMM     MMM
+MMMMO                                                      OMMMMMMMMMMMMMMM                                MMMMMMMMMMMMMMMM
+MMMMO   NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN      MMMMMMMMMMMMMMMM
+MMOMM             N              N        N         N    OMMMMNMMMMMMMMMN             N         N       MMMMMMMMMMMMMMMMMMM
+                  N              N        N         NNNNNNNNNNNMMMMMMMMMN             N         N       MMMMMMMMMMMMMMMMMMM
+                  N              N        N         N     MOOMNMMMMMOO  NNNNNNNNNNNNNNN         N       MMMMMMMMMMMMMMMMMMM
+                  N              NNNNNNNNNNNNNNNNNNNN        MNMOMO     N             NNNNNNNNNNN       MMMMMMMMMMMMMMMMMMM
+                  N              N                  N         NNNNNNNNNNN             N         N       MMMMMMMMMMMMMMMMMMM
+                  N              N                  N                   N             N         N         MMMMMMMMMMMMMMMMM
+                  N              N                  N                   N             N         N         MMMMMMMMMMMMMMMMM
+5;08;15;91;00
+2;56;11
+2;63;10
+2;68;11
+6;0;0

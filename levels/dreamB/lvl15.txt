@@ -1,0 +1,51 @@
+64;22
+04;19
+04;19
+04;19
+61;07
+null;null;null;final
+MMMMMMMMMMMMMMMMMM            ,OOOOOOOOOMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMM            ,OOOOOOOOOMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMNMMM                    ,OOOOOOOOOMMMMMMMMMMMMMMMMMMM     
+MMMMMMN                       ,OOOOOOOOOMMMMMMMMMM              
+MMMMMMN                         OOOOOOOOOOMMMMMMMM              
+MMMMMMN                         OOOVVVVOOOMMMMMOO               
+MMMMMMN                         OOO   ,OOOOOOOOOO               
+MMMMMMN                         DDD   ,OOOOOOOOOOOOOOOO-----MMMM
+MMMMMMN                         DDD   ,OOOOOOOOOOOOOOOO     MMMM
+MMMMMMN                         DDD   ,OOOOOOOO      OODDDDDMMMM
+MMMMMMN                         DDD    ,OOOO           DDDDDMMMM
+MMMMMMN                         DDD    ,OOOO                ,MMM
+MMMM      AAAAAA                DDD    ,OOOO                 ,MM
+MM        DDDDDD.       AAAAA   DDD    ,OOOOAAA              ,MM
+MM        DDDDDD.      ,MMMMM.         ,OODDDDD.             ,MM
+MM        DDDDDD.      ,MMMMM.           DDDDDD.             ,MM
+MM                     ,MMMMM.           DDDDDD.             ,MM
+MM                                       DDDDDD.             ,MM
+MM                                       VVVVVV              ,MM
+MM-----OO                                                    ,MM
+MM     OO                                                    ,MM
+MM     OO                                                    ,MM
+bg
+MMMMMMMMMM                     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMM                     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMNMMM                     MMMMMMMMMMMMMMMMMMMMMMMMMMMM     
+MMMMMMN                        MMMMMMMMMMMMMMMMMMMMMMMMM        
+MMMMMMN              N          MMMMMMMMMMMMMMMMMMMMMM          
+MMMMMMN              N          MMOOOOOOMMMMMMMMMMMMMM          
+MMMMMMN              N          MMOOOOOOMMMMMMMMMMMMMMM         
+MMMMMMNNNNNNNNNNNNNNNNNNNNNNNNNNNNNOOOOOMMMMMMMMMMMMMMM     MMMM
+MMMMMMN         N         N       OOOOOOMMMMMMMMMMNMMMM     MMMM
+MMMMMMN         N         N       OOOOOOMMMMMMM   N  MM     MMMM
+MMMMMMN         N         N       OOOOOOMMMM      N         MMMM
+MMMMMMN         N         N       OOOOOOMMMNNNNNNNN          MMM
+MMMM            N       MMNM          OOMMMM      N           MM
+OO              N      MMMMM            MMMM      N           MM
+OOO             N      MMMMMM           M         NNNNNNNNNNNNNM
+OOO             NNNNNNNMMMMMMM                    N           MM
+OOOOO           N     MMMMMMMM                    N           MM
+OOOOOOOOO       N     MMMMMMMM                    N           MM
+OOOOOOOOOO      N     MMMMMMMMM                   N           MM
+OOOOOOOOOOOO    N    MMMMMMMMMMM                  N           MM
+OOOOOOOOOOOO    N    MMMMMMMMMMM                  N           MM
+OOOOOOOOOOOO    N    MMMMMMMMMMM                  N           MM

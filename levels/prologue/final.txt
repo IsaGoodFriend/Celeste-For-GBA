@@ -1,0 +1,31 @@
+42;22
+3;18
+23;18
+3;18
+3;18
+null;null;lvl8;null
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          
+            MMMMMMMMMM                    
+        MMMMMMMMMMMMMMMMM              MMM
+      MMMMMMMMMMMMMMMMMMMM          MMMMMM
+      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+10;30;06
+1;20;08;2
+1;11;08;3

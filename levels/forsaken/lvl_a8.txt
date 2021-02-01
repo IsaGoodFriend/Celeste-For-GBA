@@ -1,0 +1,57 @@
+56;22
+52;13
+52;13
+52;13
+02;18
+null;null;lvl_a6;lvl_a7
+MMM                                              MMMMMMM
+MMM                                              MMMMMMM
+MMO                                               MMMMMM
+MMO                                               MMMMMM
+MMO                                               MMMMMM
+MMO                                               MMMMMM
+MMM                                                   MM
+MMMA                                                  MM
+MMMM.                                                 MM
+MMMM.                                                   
+MMVV                                                    
+MM.                                                     
+MM.                                                     
+                                          OOOOMMOOOMOOOO
+                                          MOMMOOOOMMMMMM
+                                          OOOMMMMMMMMMMM
+                                          MMMM   MMMMMMM
+                                          MMM      MMMMM
+MMM                                       MMM      MMMMM
+MMM                                       MM       MMMMM
+MMMMMOOO   OOO                            MM       MMMMM
+MMMMMMMO   MMM                            MM       MMMMM
+bg
+                                                        
+                                                        
+MMMOM                                                   
+MMMMMMOOMM                                              
+MMMMMMMMMNN                                      MMMMMMM
+MMMMMMMMMM                 OMMOOMMMMMO        MOMMMMMMMM
+MMMMMMMMMMOMMMMMMOMMOO     MMMMMMMMMMMMMOOOMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMOMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMO   MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMO      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMM      OMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMO        MMMMNNNNNNNNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMM       OMMMMMMMMMMMMMMMMMMMMMMMMMM      MMMMMMMMMM
+MMMMMM       MMMMMMMMMMMMMMMMMMMMMNN          MMMMMMMMMM
+MMMMMNNNNNNNNNNMMMMMMMMMMMMMMMMMMMM            MMMMMMMMM
+MMMM        N MMMOOMMMMMMMMMMMMMMMM                     
+MMMM        N        MOMMMMMMMMMMMM                     
+MMMM        N           MMMMMMMMM                       
+MMMM        N           MMMMMMMMM                       
+MMMM        N              MMMMMM                       
+MMMM        N              MMMMMM                       
+MMMM        N              MMMMMM                       
+5;05;15;08;00
+5;09;05;00;00
+5;18;12;07;00
+5;34;14;00;00
+1;04;03;0
+6;0;0

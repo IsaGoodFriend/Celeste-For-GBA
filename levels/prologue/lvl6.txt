@@ -1,0 +1,53 @@
+64;22
+05;19
+05;19
+05;19
+05;19
+lvl7;null;null;null
+OOOOOOOMMOOOOMMMMMMMMMMMMMMMMMMOOOOOOOOOOMMMMMMMMMMMMMM      MMM
+OOOOOOOMMOOOOOMMMMMMMMMMMMMMMMMOOOOOOOOOOMMMMMMMMMMMMMM      MMM
+OOOOOOOMMOO          MMMMMMMMMMMMOOOOOOOOOOOOMMMMMMMMMM      MMM
+OOOO   MM            MMMMMM         OOOOOOOMMMMMMMMMM        MMM
+OOOO   MM                                   MMMMM            MMM
+OOO    M                                    MMMM             MMM
+MOO    M                                                     OMM
+MMM                                                          OOM
+MMM                     OOOO                            OOOOOOOO
+MMM                     OOOO                            OOOOOOOO
+MMM                     OOOO                            OOMMMMMM
+MM----                  OOOO              ------        MMMMMMMM
+MM        OO            OOO                                MMMMM
+MM        OO            OOO    AAA                         MMMMM
+MM        OO            OO     MMM                         MMMMM
+MM      OOMO                   MMM             AAAAA       MMMMM
+MM      OOMM                   MOO             OOOOO       MMMMM
+MM      OMMM  AAA              MOO             OOOOO     OOOOOMM
+MMM     MMMMAAMOO              OOOAA           OOOOOO    OOOOOMM
+MMM-----MMMMMMMOO      AAAA    OOOMM           OOOOOOOOOOOOOMMMM
+MMM     MMMMMMMOO      OOOO    OOOOM           OOOOOOOOOOOMMMMMM
+MMM     MMMMMMMOO      OOOO    OOOOM           OOOOOOOOOOOMMMMMM
+bg
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOO
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOO
+MMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOO
+MMMMMMMMMMMM   MMMMMMMMMMMM         MMMMMMMMMMMMMMMMM     OOOOOO
+MMMMMMMMMMM   MMMMMMMMM                MMMMMMMMMMM          OOOO
+MMMMM  MMMMMMMMMMM                       MMMMMMMMM           MMM
+MMMM        MMMM                           MMMMM             MMM
+MMM                                          MMM             MMM
+MMM                                          MM         MMMMMMMM
+MMM                                          MM         MMMMMMMM
+MMM                                          MMM        MMMMMMMM
+MM                        OOOO            ---MMM        MMMMMMMM
+MM                      OOOOOOO             MMMM         OOOOOMM
+MM                      OOOOOOO             MMMM          OOOOMM
+MMM                     OOOOOOOOOO         MMMMM          OOOMMM
+MMM                     OOOOOOOOOO       MMMMMMMM        OOOOOMM
+MMMM                   OOOO  OOOOO      MMMMMMMMMMMM   OOOOOOMMM
+MMMMMMMMMM             OOO     OOO      MMMM  MMMMMOOOOOOOOOOOMM
+MMMMMMMMMMM            OOOOO   OOO     MMMMM   MMMMOOOOOOOOOOOMM
+MMMMMMMMMMM           OOOOOOOOOOOO     MMMM    MMMMOOOOOOOOOOOMM
+MMMMMMMMMMMMM         OOOOOOOOOOOO      MMM    MMMMOOOOOOOOOOOMM
+MMMMMMMMMMMMM         OOOOOOOOOOOO      MMM    MMMMOOOOOOOOOOOMM
+1;58;05;0
+7;29;17

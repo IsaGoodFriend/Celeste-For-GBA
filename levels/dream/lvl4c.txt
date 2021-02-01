@@ -1,0 +1,52 @@
+32;22
+03;09
+03;09
+03;09
+03;09
+null;null;lvl4_winged;null
+MMMMMMMMMMMMMMMM      EE     MMM
+MMMMMMMMMMMMMMMM      EE     MMM
+MMMMM      ,DDDD      EE     MMM
+MMMM       ,DDDD      EE     MMM
+           ,DDDD      EE     MOO
+           ,DDDD      EE  @ #OOO
+            OOOO      EE,OOOOOOO
+            OOOO      EE,OOOOOOO
+            OOOO        ,OOOOOOO
+NNNNNEEEEEEEEOOO            OOOO
+MMMMNEEEEEEEEOO.  AAAAA         
+MMMMN      AAOO.  DDDDD         
+MMMMN      MMOO.  DDDDD         
+MMMM       MMMO.  DDDDD         
+MMMM       v DD                 
+MMMM         DD                 
+MMMM         DD                 
+MMEEEEEE     DD                 
+MMEEEEEE     DD                 
+OOA          DD    QQQQQQ       
+OOO          DD    QQQQQQ       
+OOO          DD                 
+bg
+MMMMMMMMMMMMMMMMMMMMMMM         
+MMMMMMMMMMMMMMMMMMMMMMM         
+MMMMMM  (MMMMMMMMMMMMMMM4       
+MMMM       MMMMMMMMMMMMMMMM     
+MMM        MMMMMMMMMMMMMMMMMM   
+MMM       !MMMMMMMMMMMMMMMMMMMMM
+MMMM     #MMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMM   MMMMMMMM
+MMMMMMMMMMMMMMMMMMMM       MMMMM
+MMMMMMMMMMMMMMMMMMMM            
+MMMMMMMMMMMMMMMMMMM             
+MMMMMMMMMMMM  MMMMM             
+MMMMMMMMMMMM    MMM             
+MMMMMMMMMMM                     
+MMMMMMMMMMM                     
+MMMMMMMMM                       
+MMMM                            
+MMMM                            
+MMM                             
+MMM                             
+MMM                             
+8;26;03

@@ -1,0 +1,51 @@
+32;22
+05;19
+28;05
+28;05
+28;05
+lvl2;null;null;lvl_test
+MMMOOOOOOOOOOOOOOOOOOOO      MMM
+MMMOOOOOOOOOOOOOOOOOOOO      MMM
+MMMOOOOOOOOOOOOOO) [OOO      MMM
+MMMMOOO}   []       OOO      MMM
+MMMMOOO             [OO    8 MMM
+MMMMOOO              OO    --MMM
+MMMMOOO                      MMM
+MMMMMMM     AA               ,MM
+MMMMMMM     MM               ,MM
+MMMMMMM     MM     AA        ,MM
+MMMMM.      MM     MM        ,MM
+MMMMM.      MM     MM        ,MM
+OOMMM.      MM     MM        ,MM
+OOOOM.      MM     MM        ,MM
+OOO         MM     MM       AAMM
+OOO         MM     MM       OOOO
+OOO         MM              OOOO
+OOO         MM              OOOO
+OOO2        MM              OOOO
+OOOOOOO                      OOO
+OOOOOOO                      OOO
+OOOOOOO                      OOO
+bg
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMM      MMMMM
+MMMMMMMMMMMMMMMMMMMMM        MMM
+MMMMMMMMMMMMMMMMMMMMM           
+MMMMMMMMMMMMMMMMMMMMM           
+MMMMMMMMMMMMMMMMMMMMMM          
+MMMMMMMMMMMMMMMMMMMMMMMMM       
+MMMMMMMM   MMMMMMMMMMMMMMMMMMMMM
+MMMMMMMM     MMMMMMMMMMMMMMMMMMM
+MMMMMM       MMMMMMMMMMMMMMMMMMM
+             MM       MMMMMMMMMM
+                         MMMMMMM
+                         MMMMMMM
+                         MMMMMMM
+                          MMMMMM
+                          MMMMMM
+                            MMMM
+                            MMMM
+                             MMM
+                             MMM
+                             MMM
