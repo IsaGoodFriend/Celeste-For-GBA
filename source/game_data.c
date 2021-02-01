@@ -22,25 +22,25 @@ const char** chapter_pointers[LEVELIDX_MAX]= {
 	(const char**)(&levels_prologue[0]),
 	(const char**)(&levels_dream[0]),
 	(const char**)(&levels_forsaken[0]),
-	(const char**)(&levels_water[0]),
+	//(const char**)(&levels_water[0]),
 };
 const char** chapter_pointersBside[LEVELIDX_MAX]= {
 	(const char**)(&levels_prologue[0]),
 	(const char**)(&levels_dreamB[0]),
 	(const char**)(&levels_forsakenB[0]),
-	(const char**)(&levels_water[0]),
+	//(const char**)(&levels_water[0]),
 };
 const char* chapter_names[LEVELIDX_MAX]= {
 	(char*)&prologue_visName,
 	(char*)&dream_visName,
 	(char*)&forsaken_visName,
-	(char*)&water_visName,
+	//(char*)&water_visName,
 };
 const int chapter_map_locations[LEVELIDX_MAX << 1]= {
 	0x03800, 0x1E000,
 	0x08000, 0x1C000,
 	0x0E000, 0x1B000,
-	0x14000, 0x1B000,
+	//0x14000, 0x1B000,
 };
 
 const char emptyFileName[FILENAME_LEN]= {
@@ -679,9 +679,14 @@ void OpenPause() {
 	}
 	else {
 		memcpy(&pal_bg_mem[7  << 4], heartb_pal, 32);
-		letterOffset = pausemenu_b_tilesetLen >> 5;
+		
+		offset = 0x140 << 5;
+		
 		memcpy(se_mem[FOREGROUND_LAYER], pausemenu_b_fg, pausemenu_b_fgLen);
-		memcpy(&tile_mem[1][0], pausemenu_b_tileset, offset = pausemenu_b_tilesetLen);
+		memcpy(&tile_mem[1][offset >> 5], pausemenu_b_tileset, pausemenu_b_tilesetLen);
+		
+		offset += pausemenu_tilesetLen;
+		letterOffset = offset >> 5;
 	}
 	memset(se_mem[MIDGROUND_LAYER], 0, pausemenu_fgLen);
 	offset >>= 5;

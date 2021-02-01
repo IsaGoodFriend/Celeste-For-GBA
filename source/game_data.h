@@ -67,7 +67,7 @@ typedef struct Actor
 #define LEVELIDX_CORE		10
 #define LEVELIDX_EPI		10
 
-#define LEVELIDX_MAX		4
+#define LEVELIDX_MAX		3
 
 // Background locations
 #define FOREGROUND_LAYER		31
