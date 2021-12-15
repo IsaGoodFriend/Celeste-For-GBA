@@ -1,9 +1,21 @@
-32;22
-07;19
-07;19
-07;19
-07;19
-lvl3;null;null;null
+32 - 22 - 2
+
+meta
+0 ; 32
+1 ; 22
+2 ; 07
+3 ; 19
+4 ; 07
+5 ; 19
+6 ; 07
+7 ; 19
+8 ; {levelIndex : lvl3 : prologue}
+9 ; 255
+10 ; 255
+11 ; 255
+end
+
+layer - 0
 MMMMMMMMMMMMMOOOOOOO      MMMMMM
 MMMMMMMMMMMMMOOOOOOO      MMMMMM
 MMMMMMMMMMMMMOOOOOOO      MMMMMM
@@ -26,7 +38,9 @@ MMMM          MOOOO        MMMMM
 MMMMMMM----MMMMMOOO        MMMMM
 MMMMMMM    MMMMMOOO        MMMMM
 MMMMMMM    MMMMMOOO        MMMMM
-bg
+end
+
+layer - 1
 MMMMMMMMMMMM     MMM      MMMMMM
 MMMMMMMMMMMM     MMM      MMMMMM
 MMMMMMMMMMMM     MMM      MMMMMM
@@ -49,4 +63,7 @@ OOOOOOOOOOOOOOO            MMMMM
 OOOOOOOOOOOOOOO            MMMMM
 OOOOOOOOOOOOOOO            MMMMM
 OOOOOOOOOOOOOOO            MMMMM
-2;10;49
+end
+
+entities
+end

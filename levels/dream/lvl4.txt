@@ -1,9 +1,21 @@
-53;22
-03;07
-41;03
-03;07
-03;07
-lvl4_winged;null;lvl3;null
+53 - 22 - 2
+
+meta
+0 ; 53
+1 ; 22
+2 ; 03
+3 ; 07
+4 ; 41
+5 ; 03
+6 ; 03
+7 ; 07
+8 ; {levelIndex : lvl4_winged : dream}
+9 ; 255
+10 ; {levelIndex : lvl3 : dream}
+11 ; 255
+end
+
+layer - 0
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOO       MMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOO       MMMMMMMM
 MMMMMMMMMMMMMMMMMMMMM         OOOOOOOO       MMMMMMMM
@@ -22,11 +34,13 @@ OO                                       OOO   MMMMMM
 OO                                             MMMMMM
 OO                              AAAA           MMMMMM
 OO----                         AMMMM           MMMMMM
-OO                            ,MMMMM     8 &   MMMMMM
+OO                            ,MMMMM           MMMMMM
 OO               ------       ,MMMMM    ----   MMMMMM
 OO                            ,MMMMM           MMMMMM
 OO                            ,MMMMM           MMMMMM
-bg
+end
+
+layer - 1
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMNMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMM     N  MMMMMMMMMMMMMMMMMMMMMMM
@@ -40,13 +54,16 @@ MMM          MMMMMNNNNNNNNNN          MMMMM    MMMMMM
 MMM          MMMMMM      MMN          MMMMM    MMMMMM
 OOO           MMMMM      MMN         MMMMMM    MMMMMM
 OOO           MMMM       MMN       MMMMMMMNNNNNMMMMMM
-OOO1           MMM       MMNMM    MMMMMMMM     MMMMMM
+OOO            MMM       MMNMM    MMMMMMMM     MMMMMM
 OOOOO                     MMMMMMMMMMMMMMMM     MMMMMM
 OOOOO                      MMMMMMMMMMM         MMMMMM
-OOOOO2                      MMMMMMMMM          MMMMMM
+OOOOO                       MMMMMMMMM          MMMMMM
 OOOOOO                      MMMMMMMM           MMMMMM
-OOOOOOO        OOOO3         MMMMMMM           MMMMMM
+OOOOOOO        OOOO          MMMMMMM           MMMMMM
 OOOOOOO       OOOOOOOOOO     MMMMMMM           MMMMMM
 OOOOOOO       OOOOOOOOOOO    MMMMMMM           MMMMMM
 OOOOOOO      OOOOOOOOOOOO     MMMMMM           MMMMMM
-1;28;16;0
+end
+
+entities
+end

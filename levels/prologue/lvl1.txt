@@ -1,29 +1,70 @@
-32;22
-03;10
-04;18
-04;18
-04;18
-lvl2;null;lvl1s;null
-MMMMMMMMMMMMMMMMMMMMMMMRRRRMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMRRRRMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMRRRRMMMMM
-MMMMMMMMMMMMMMMRRRRR   RRRRMMMMM
-MMMMMMMMMM    RRRR      RRRMMMMM
-MMMMMMMMM   RRRRRR       RRMMMMM
-MMMOOOOMMRRRRRRRRR       RRMMMMM
-RRRoooo RRRRRRRRRRR  OOOOOOOMMMM
-RRRoooo  RRRRRRRRRRRROOOMOOMMMMM
-RRRoooo  RRRRRRRRRRRROOOMMMMMMMM
-OOOOOOOMMMMMRRRRRRRRRRRRMMMMMMMM
-OOOMMMMMMMMMRRRRRRRR   RMMMMMMMM
-MMMMMMMMRRRR   RRRR     MMMMMMMM
-MMMMM   RRRR  RRRRR     RMMMMMMM
-MMYY    RRRRRRRRRR       MMMMMMM
-MMYYY     RRRRRRRR       MMMMMMM
-MMYYYYY      ROOOO       MMMMMMM
-MMYYYYYMMM   ROOOO    AAAMMMMMMM
-MMMMMMMMMM    OOOOAAAAMMMMMMMMMM
-MMMMMMMMMMAAAAOOOOOOOMMMMMMMMMMM
-MMMMMMMMMMMMMMMMOOOOMMMMMMMMMMMM
+32 - 22 - 2
+
+meta
+0 ; 32
+1 ; 22
+2 ; 03
+3 ; 10
+4 ; 04
+5 ; 18
+6 ; 04
+7 ; 18
+8 ; {levelIndex : lvl2 : prologue}
+9 ; 255
+10 ; {levelIndex : lvl1s : prologue}
+11 ; 255
+end
+
+layer - 0
+MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
+MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
+MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
+MMMMMMMMMMMMMMM            MMMMM
+MMMMMMMMMM                 MMMMM
+MMMMMMMMM                  MMMMM
+MMMMMMMMM                  MMMMM
+                     OOOMMMMMMMM
+                     OOOMMMMMMMM
+                     OOOMMMMMMMM
+MMMMMMMMMM              MMMMMMMM
+MMMMMMMMMM              MMMMMMMM
+MMMMMMMM                MMMMMMMM
+MMMMM                    MMMMMMM
+MM                       MMMMMMM
+MM                       MMMMMMM
+MM            MMMM       MMMMMMM
+MM     MMM    MMMM       MMMMMMM
+MMMMMMMMMM    MMMM    MMMMMMMMMM
+MMMMMMMMMM    MMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-10;0;0
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+end
+
+layer - 1
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+end
+
+entities
+start;3;17
+end

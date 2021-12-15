@@ -1,7 +1,0 @@
-Water           
-levels:
-lvl_a1
-lvl_a2
-lvl_a3
-lvl_a4
-lvl_a5

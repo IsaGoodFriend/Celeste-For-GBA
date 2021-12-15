@@ -1,9 +1,21 @@
-123;22
-03;15
-120;15
-03;15
-03;15
-null;null;lvl_b3;lvl_b5
+123 - 22 - 2
+
+meta
+0 ; 123
+1 ; 22
+2 ; 03
+3 ; 15
+4 ; 120
+5 ; 15
+6 ; 03
+7 ; 15
+8 ; 255
+9 ; 255
+10 ; {levelIndex : lvl_b3 : forsaken}
+11 ; {levelIndex : lvl_b5 : forsaken}
+end
+
+layer - 0
 MMMM                                                                                                                   MMMM
 MMMO                                                                                                                   OMMM
 MMMO                                                                                                                   MMMM
@@ -26,7 +38,9 @@ MMMM                  XXXMM            XMM                                      
 MMMM                 XXXXMM           XXM                                           XXXXOMMX                MMM         MMM
 MMO                  XXXOMO           XXMM                                          XXXXMMMX                            MMM
 MMM                  XXXMMO           XXOM                                          XXXXOMMX                            MMM
-bg
+end
+
+layer - 1
                                                                                                                            
                                                                                                                            
                                                                                                                            
@@ -49,8 +63,11 @@ MMOMM             N              N        N         N    OMMMMNMMMMMMMMMN       
                   N              N                  N         NNNNNNNNNNN             N         N       MMMMMMMMMMMMMMMMMMM
                   N              N                  N                   N             N         N         MMMMMMMMMMMMMMMMM
                   N              N                  N                   N             N         N         MMMMMMMMMMMMMMMMM
+end
+
+entities
 5;08;15;91;00
 2;56;11
 2;63;10
 2;68;11
-6;0;0
+end

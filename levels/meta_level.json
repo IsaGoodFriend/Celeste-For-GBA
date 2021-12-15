@@ -1,0 +1,126 @@
+{
+	"Template" : {
+		"Wrapping" : {
+			"1" : {
+				"Mapping" : [
+					"1, 0", "-1, 0", "0, 1", "0, -1",
+					"1, 1", "-1, 1", "1, -1", "-1, -1",
+					"2, 0", "2, 1", "2, -1", "-2, 0", "-2, 1", "-2, -1", "0, 2", "1, 2", "-1, 2", "0, -2", "1, -2", "-1, -2",
+				],
+				"TileMapping" : {
+					"11111111111111111111" : ["10, 9", "11, 9"],
+					"1111****************" : ["2, 2", "2, 3", "3, 2", "3, 3", "7, 2", "7, 3", "8, 2", "8, 3"],
+					
+					"0101****************" : ["4, 4", "5, 10", "9, 4"],
+					"1001****************" : ["1, 4", "1, 10", "6, 4"],
+					"0110****************" : ["4, 1", "5, 6", "9, 1"],
+					"1010****************" : ["1, 1", "1, 6", "6, 1"],
+					
+					"0111****************" : ["5, 7", "5, 8", "5, 9"],
+					"1011****************" : ["1, 7", "1, 8", "1, 9"],
+					"1101****************" : ["2, 10", "3, 10", "3, 10"],
+					"1110****************" : ["2, 6", "3, 6", "4, 6"],	
+					
+					"********************" : ["1, 1"]
+				}
+				
+			},
+			"0" : {
+				"Mapping" : [
+					"1, 0", "-1, 0", "0, 1", "0, -1",
+				],
+				"TileMapping" : {
+					
+					"****" : ["0, 0"]
+				}
+				
+			}
+		}
+	},
+	"Prologue" : {
+		"LevelPacks" : ["prologue"],
+		
+		"EntityIndex" : {
+			"start" : 0
+		},
+		"Wrapping" : {
+			"M" : {
+				"Palette" : 0,
+				"Tileset" : "dirt",
+				"CollisionType" : 1,
+				"Connections" : ["M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"N" : {
+				"Palette" : 0,
+				"Tileset" : "dirt",
+				"CollisionType" : 1,
+				"Connections" : ["N"],
+				"MappingCopy" : "Template/1"
+			},
+			"O" : {
+				"Palette" : 1,
+				"Tileset" : "snow",
+				"Connections" : ["M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"m" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["m"],
+				"MappingCopy" : "Template/1"
+			},
+			"o" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["o"],
+				"MappingCopy" : "Template/1"
+			},
+			"R" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["R"],
+				"MappingCopy" : "Template/1"
+			},
+			"Y" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["Y"],
+				"MappingCopy" : "Template/1"
+			},
+			"-" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["-", "M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"V" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["V", "M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"A" : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : ["A", "M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"," : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : [",", "M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"." : {
+				"Palette" : 1,
+				"Tileset" : "dirt",
+				"Connections" : [".", "M", "N", "O"],
+				"MappingCopy" : "Template/1"
+			},
+			"S" : {
+				"Tileset" : "NULL",
+			},
+		}
+	}
+}

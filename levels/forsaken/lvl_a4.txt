@@ -1,9 +1,21 @@
-52;22
-49;19
-09;06
-03;18
-03;18
-lvl_a4s;null;lvl_a3;lvl_a5
+52 - 22 - 2
+
+meta
+0 ; 52
+1 ; 22
+2 ; 49
+3 ; 19
+4 ; 09
+5 ; 06
+6 ; 03
+7 ; 18
+8 ; {levelIndex : lvl_a4s : forsaken}
+9 ; 255
+10 ; {levelIndex : lvl_a3 : forsaken}
+11 ; {levelIndex : lvl_a5 : forsaken}
+end
+
+layer - 0
 MMMMMMMMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMM        MMMMM      MMMMMMMMMM       MMMMMMMMM
@@ -26,7 +38,9 @@ MOOO--
 MMMM                                          MOOOMM
 MMMM                                          OOOOOO
 MMMM                                          OOOMMO
-bg
+end
+
+layer - 1
 MMMMMMMMM      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMM      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMM      MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -49,6 +63,9 @@ MMMM         N            N                OOMMMMMMM
 MMMM         N            N                MOMMMMMMM
 MMMM         N            N                 OOMMMMMM
 MMMM         N            N                 OMMMMMMM
+end
+
+entities
 5;10;12;20;0
 5;35;13;00;0
-1;36;04;00;0
+end

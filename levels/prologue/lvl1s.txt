@@ -1,9 +1,21 @@
-32;22
-29;12
-29;12
-29;12
-29;12
-null;null;null;lvl1
+32 - 22 - 2
+
+meta
+0 ; 32
+1 ; 22
+2 ; 29
+3 ; 12
+4 ; 29
+5 ; 12
+6 ; 29
+7 ; 12
+8 ; 255
+9 ; 255
+10 ; 255
+11 ; {levelIndex : lvl1 : prologue}
+end
+
+layer - 0
                     OOOOOOMMMMMM
                     OOOOOOOOMMMM
                        OOOOOMMMM
@@ -26,7 +38,9 @@ null;null;null;lvl1
                             MMMM
                             MMMM
                             MMMM
-bg
+end
+
+layer - 1
                           MMMMMM
                           MMMMMM
                           MMMMMM
@@ -49,4 +63,7 @@ bg
               MMMM              
               MM                
               MM                
-1;03;13;0
+end
+
+entities
+end

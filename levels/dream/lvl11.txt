@@ -1,9 +1,21 @@
-64;22
-03;08
-03;08
-61;19
-58;06
-lvl15;null;lvl14;lvl11_berry
+64 - 22 - 2
+
+meta
+0 ; 64
+1 ; 22
+2 ; 03
+3 ; 08
+4 ; 03
+5 ; 08
+6 ; 61
+7 ; 19
+8 ; {levelIndex : lvl15 : dream}
+9 ; 255
+10 ; {levelIndex : lvl14 : dream}
+11 ; {levelIndex : lvl11_berry : dream}
+end
+
+layer - 0
 MMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
 MMMMMMMMMMMMMMMMMNNNNNNNNNNNOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
 MMMMMMMMMMMMMMMMMN         OOOOMMMMMMMMMMMMMMMMMMMMMMMOOO    MMM
@@ -26,7 +38,9 @@ MM                                                  OOOMMOO
 MM                                                  MMMMMMMMMMMM
 MM                                                  MMMMMMMMMMMM
 MM                                                  MMMMMMMMMMMM
-bg
+end
+
+layer - 1
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOO         
@@ -49,3 +63,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                       MMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                      MMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        MMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        MMM
+end
+
+entities
+end

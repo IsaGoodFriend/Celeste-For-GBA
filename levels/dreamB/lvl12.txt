@@ -1,9 +1,21 @@
-32;22
-3;08
-4;18
-4;18
-4;18
-null;null;lvl10;null
+32 - 22 - 2
+
+meta
+0 ; 32
+1 ; 22
+2 ; 3
+3 ; 08
+4 ; 4
+5 ; 18
+6 ; 4
+7 ; 18
+8 ; 255
+9 ; 255
+10 ; {levelIndex : lvl10 : dreamB}
+11 ; 255
+end
+
+layer - 0
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMM           MMMMMMMMMMM
@@ -26,7 +38,9 @@ MMM----MM                  MMMMM
 MMM    MM                  MMMMM
 MMM    MM                    MMM
 MMM    MM                    MMM
-bg
+end
+
+layer - 1
 MMMM     MMMMMMMMMMMMMMMMMMMMMMM
 MMMM     MMMMMMMMMMMMMMMMMMMMMMM
 MMMM      MMMMMMMMMMMMMMMMMMMMMM
@@ -49,5 +63,8 @@ MMMMMMNMM       MMM         MMMM
 MMMMMMMMM                    MMM
 MMMMMMMMMM                   MMM
 MMMMMMMMMM                   MMM
+end
+
+entities
 2;17;16
-2;27;6
+end

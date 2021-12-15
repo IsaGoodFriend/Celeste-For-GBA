@@ -1,15 +1,27 @@
-32;25
-05;09
-05;09
-05;09
-05;09
-lvl6;null;null;null
+32 - 25 - 2
+
+meta
+0 ; 32
+1 ; 25
+2 ; 05
+3 ; 09
+4 ; 05
+5 ; 09
+6 ; 05
+7 ; 09
+8 ; {levelIndex : lvl6 : dream}
+9 ; 255
+10 ; 255
+11 ; 255
+end
+
+layer - 0
 OO     OOOOOOOOOOOOOOOOOOOOOOOOO
 OO     OOOOOOOOOOOOOOOOOOOOOOOOO
-OO     OOOO       (OOOOOOOOOOOOO
-OO                 OOOO]   OOOOO
+OO     OOOO        OOOOOOOOOOOOO
+OO                 OOOO    OOOOO
 OO                         OOOOO
-OO1                         OOOO
+OO                          OOOO
 OOO                         OOOO
 OOO                         OOOO
 OOOO          OOOO           OOO
@@ -29,33 +41,38 @@ OOO
 OO                              
 OO                              
 OO                              
-bg
+end
+
+layer - 1
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-OOO 0  OOOOOOOOOOOOOOOOOOOOOOOOO
-OO9     ) OOOOOOOOO   {OOOOOOOOO
+OOO    OOOOOOOOOOOOOOOOOOOOOOOOO
+OO        OOOOOOOOO    OOOOOOOOO
 OO         OOOOOOO      OOOOOOOO
-OO         OOOOOOO         (OOOO
+OO         OOOOOOO          OOOO
 OOOO       OOOOOOOO          OOO
 OOOO       OOOOOOOO          OOO
 OOOO         OOOOOO         AOOO
 OOOO           OOOO         OOOO
-OOOOO4         OOO          OOOO
-OOOOOOOO3  5  $OOO          OOOO
+OOOOO          OOO          OOOO
+OOOOOOOO       OOO          OOOO
 OOOOOOOOOOOOOOOOO           OOOO
 OOOOOOOOOOOOOOOOOO          OOOO
-OOOOOOOOOOOOOOOOOOOOOO1   OOOOOO
+OOOOOOOOOOOOOOOOOOOOOO    OOOOOO
 OOOOOOOOOO    OOOOOOOOOOOOOOOOOO
-OOOOOO}             {OOOOOOOOOOO
-OOOO]                  OOOOOOOOO
+OOOOOO               OOOOOOOOOOO
+OOOO                   OOOOOOOOO
 OOOO                    OOOOOOOO
 OOO                     OOOOOOOO
 OOO                      OOOOOOO
 OO                        OOOOOO
                             OOOO
+end
+
+entities
 1;15;05;0
 2;08;14
 2;15;16
-7;22;18
+end

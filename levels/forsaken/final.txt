@@ -1,9 +1,21 @@
-32;22
-07;18
-07;18
-07;18
-07;18
-null;null;null;null
+32 - 22 - 1
+
+meta
+0 ; 32
+1 ; 22
+2 ; 07
+3 ; 18
+4 ; 07
+5 ; 18
+6 ; 07
+7 ; 18
+8 ; 255
+9 ; 255
+10 ; 255
+11 ; 255
+end
+
+layer - 0
 M                              M
 M                              M
 M                              M
@@ -26,6 +38,9 @@ MMMM------MMMMMMMMMMMMMMMMMMMMMM
 MMMM      MMMMMMMMMMMMMMMMMMMMMM
 MMMM      MMMMMMMMMMMMMMMMMMMMMM
 MMMM      MMMMMMMMMMMMMMMMMMMMMM
+end
+
+entities
 10;15;00
 1;04;10;3
-1;10;10;2
+end

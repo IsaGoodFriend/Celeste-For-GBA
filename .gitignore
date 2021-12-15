@@ -1,15 +1,17 @@
-/build/
-/output/
-/edited*.txt
-/sprites/
-/bgtiles/
-/maxmod_data/
-/transitions/
-/gb music/
+*.clang-format
 
-/Makefile
+*.o
+*.raw
+*.med
+*.d
 
-*.pnproj
-*.pnps
-*.elf
-*.gba
+**/.vscode/*
+maxmod_data/*
+output/*
+build/*
+sprites/*
+art/*
+source - old/*
+BG_Externs.h
+temp/*
+exData.txt

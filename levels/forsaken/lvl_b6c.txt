@@ -1,9 +1,21 @@
-61;26
-51;23
-51;23
-51;23
-51;23
-null;lvl_b6;null;null
+61 - 26 - 2
+
+meta
+0 ; 61
+1 ; 26
+2 ; 51
+3 ; 23
+4 ; 51
+5 ; 23
+6 ; 51
+7 ; 23
+8 ; 255
+9 ; {levelIndex : lvl_b6 : forsaken}
+10 ; 255
+11 ; 255
+end
+
+layer - 0
 MMM                                                   MMMMMMM
 MMM                                                   MMMMMMM
 MMM                                                   MMMMMMM
@@ -30,7 +42,9 @@ MMMMMMMXXX            XXXXX                                MM
 MMMMMMXXXXXX        XXXXXXX                      MMMMM     MM
 MMMMMMXXXXXXX       XXXXXXX                      MMMMM     MM
 MMMMMMXXXXXXXAAAAAAAXXXXXXXAAAAAAAAAAAAAAAAAAAAAAMMMMM     MM
-bg
+end
+
+layer - 1
                                                         MMMMM
                                                         MMMMM
         NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN      MMMMM
@@ -57,7 +71,10 @@ bg
            MMMMMMM       N               N    MMMMMMMMMMMMMMM
            MMMMMMM       N               N    MMMMMMMMMMMMMMM
            MMMMMMM       N               N    MMMMMMMMMMMMMMM
+end
+
+entities
 6;00;00
 5;35;21;10;10
 5;08;03;40;00
-8;05;11
+end

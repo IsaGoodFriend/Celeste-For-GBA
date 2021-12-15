@@ -1,23 +1,35 @@
-32;53
-06;49
-29;09
-05;10
-06;49
-null;lvl6;lvl7s;lvl8
+32 - 53 - 2
+
+meta
+0 ; 32
+1 ; 53
+2 ; 06
+3 ; 49
+4 ; 29
+5 ; 09
+6 ; 05
+7 ; 10
+8 ; 255
+9 ; {levelIndex : lvl6 : dream}
+10 ; {levelIndex : lvl7s : dream}
+11 ; {levelIndex : lvl8 : dream}
+end
+
+layer - 0
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMM     [MMMMMMMM
-MMMMMMMMMMMMMMMMM}         MMMMM
+MMMMMMMMMMMMMMMMMM      MMMMMMMM
+MMMMMMMMMMMMMMMMM          MMMMM
 NNNNNNNNNNNNNMMMM               
- oo     0  {MMMMM               
+ oo         MMMMM               
  oo          DD                 
- oo          DD         7    8  
+ oo          DD                 
  oo          DD       NNNNNNNNNN
 NNNNNN       DD       NOOOOOOOOO
-MMMMMN       DD    ---N [OOOOOOO
+MMMMMN       DD    ---N  OOOOOOO
 MMMMMN       DD          OOOOOOO
-MMMM9        DD           MOOOOO
+MMMM         DD           MOOOOO
 MMMM         DD           MMOOOO
 MMMMA        DD           MMOOOO
 MMMNN        DD           MMMOOO
@@ -36,7 +48,7 @@ MMMMMM           ,DDDD       ,MM
 MMMMMM           ,DDDD       AMM
 MMMMMM           ,DDDD       NMM
 MMMMMM                       NMM
-MMMMMM1                      NMM
+MMMMMM                       NMM
 MMMMOOOOO                    NMM
 MMMMOOOOO                    NMM
 MMMMMOOO.                    NMM
@@ -51,13 +63,15 @@ MMM                         ,MMM
 MMM                         ,MMM
 OOM                         ,MMM
 OOM                         ,MMM
-OOO        c                ,MMM
-OOO   *   bzB5               ,MM
+OOO                         ,MMM
+OOO                          ,MM
 OOOO------MMMMM              ,MM
 OOOO      MMMMM              ,MM
 OOOO      MMMM               ,MM
 OOOO      MMMMAAAAAAAAAAAAAAAAMM
-bg
+end
+
+layer - 1
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -111,5 +125,9 @@ MMMMMMMMMMMMMMMNM          MMMMM
 MMMMMMMMMMMMMMMMMMM         MMMM
 MMMMMMMMMMMMMMMMMMMM        MMMM
 MMMMMMMMMMMMMMMMMMMM        MMMM
+end
+
+entities
 1;23;20;0
 2;25;44
+end

@@ -1,9 +1,21 @@
-56;22
-52;13
-52;13
-52;13
-02;18
-null;null;lvl_a6;lvl_a7
+56 - 22 - 2
+
+meta
+0 ; 56
+1 ; 22
+2 ; 52
+3 ; 13
+4 ; 52
+5 ; 13
+6 ; 52
+7 ; 13
+8 ; 255
+9 ; 255
+10 ; {levelIndex : lvl_a6 : forsaken}
+11 ; {levelIndex : lvl_a7 : forsaken}
+end
+
+layer - 0
 MMM                                              MMMMMMM
 MMM                                              MMMMMMM
 MMO                                               MMMMMM
@@ -26,7 +38,9 @@ MMM                                       MMM      MMMMM
 MMM                                       MM       MMMMM
 MMMMMOOO   OOO                            MM       MMMMM
 MMMMMMMO   MMM                            MM       MMMMM
-bg
+end
+
+layer - 1
                                                         
                                                         
 MMMOM                                                   
@@ -49,9 +63,12 @@ MMMM        N           MMMMMMMMM
 MMMM        N              MMMMMM                       
 MMMM        N              MMMMMM                       
 MMMM        N              MMMMMM                       
+end
+
+entities
 5;05;15;08;00
 5;09;05;00;00
 5;18;12;07;00
 5;34;14;00;00
 1;04;03;0
-6;0;0
+end

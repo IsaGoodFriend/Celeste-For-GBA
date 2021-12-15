@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "source"
+		},
+		{
+			"path": "levels"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"tonc.h": "c",
+			"pixtro_basic.h": "c",
+			"tonc_vscode.h": "c",
+			"char.h": "c",
+			"tonc_types.h": "c",
+			"levels.h": "c",
+			"typeinfo": "cpp",
+			"graphics.h": "c",
+			"state_machine.h": "c"
+		}
+	}
+}

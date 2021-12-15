@@ -1,15 +1,27 @@
-32;22
-03;09
-03;09
-03;09
-03;09
-null;null;lvl4_winged;null
+32 - 22 - 2
+
+meta
+0 ; 32
+1 ; 22
+2 ; 03
+3 ; 09
+4 ; 03
+5 ; 09
+6 ; 03
+7 ; 09
+8 ; 255
+9 ; 255
+10 ; {levelIndex : lvl4_winged : dream}
+11 ; 255
+end
+
+layer - 0
 MMMMMMMMMMMMMMMM      EE     MMM
 MMMMMMMMMMMMMMMM      EE     MMM
 MMMMM      ,DDDD      EE     MMM
 MMMM       ,DDDD      EE     MMM
            ,DDDD      EE     MOO
-           ,DDDD      EE  @ #OOO
+           ,DDDD      EE     OOO
             OOOO      EE,OOOOOOO
             OOOO      EE,OOOOOOO
             OOOO        ,OOOOOOO
@@ -18,7 +30,7 @@ MMMMNEEEEEEEEOO.  AAAAA
 MMMMN      AAOO.  DDDDD         
 MMMMN      MMOO.  DDDDD         
 MMMM       MMMO.  DDDDD         
-MMMM       v DD                 
+MMMM         DD                 
 MMMM         DD                 
 MMMM         DD                 
 MMEEEEEE     DD                 
@@ -26,14 +38,16 @@ MMEEEEEE     DD
 OOA          DD    QQQQQQ       
 OOO          DD    QQQQQQ       
 OOO          DD                 
-bg
+end
+
+layer - 1
 MMMMMMMMMMMMMMMMMMMMMMM         
 MMMMMMMMMMMMMMMMMMMMMMM         
-MMMMMM  (MMMMMMMMMMMMMMM4       
+MMMMMM   MMMMMMMMMMMMMMM        
 MMMM       MMMMMMMMMMMMMMMM     
 MMM        MMMMMMMMMMMMMMMMMM   
-MMM       !MMMMMMMMMMMMMMMMMMMMM
-MMMM     #MMMMMMMMMMMMMMMMMMMMMM
+MMM        MMMMMMMMMMMMMMMMMMMMM
+MMMM      MMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMM   MMMMMMMM
 MMMMMMMMMMMMMMMMMMMM       MMMMM
@@ -49,4 +63,8 @@ MMMM
 MMM                             
 MMM                             
 MMM                             
+end
+
+entities
 8;26;03
+end
