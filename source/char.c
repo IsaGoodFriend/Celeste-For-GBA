@@ -39,7 +39,8 @@ int CHAR_umbrellaOffset;
 
 #if 1 // Constants
 
-#define SOLID_COLLISION 1
+#define SOLID_COLLISION	 1
+#define DANGER_COLLISION 0
 
 #define JUMP_BUFFER 5
 #define DASH_BUFFER 5
@@ -102,7 +103,7 @@ int CHAR_umbrellaOffset;
 #define F_WallSpeedRetentionTime 6
 
 #define F_Gravity	  0x40
-#define F_MaxFall	  0x255
+#define F_MaxFall	  0x2A8
 #define F_FastMaxFall 0x400
 
 #define F_HalfGravThreshold 170
@@ -185,12 +186,14 @@ int CHAR_umbrellaOffset;
 
 #define F_WalkSpeed 64 << ACC
 
+#endif
+
 // Flag zero (Dashing)
 #define DASH_HORZ_MASK 0x0003
 #define DASH_VERT_MASK 0x000C
 #define DASH_DIR_MASK  0x000F
 #define DASHING_UP	   0x000C
-#define DASHING_DOWN   0x0008
+#define DASHING_DOWN   0x0004
 #define IS_DASH_DIR(f) (!((CHAR_ent->flags[0] & DASH_DIR_MASK) ^ f))
 
 #define DASH_AMOUNT_MASK	0x0030
@@ -226,8 +229,6 @@ int CHAR_umbrellaOffset;
 #define IS_TIRED (stamina <= F_ClimbTiredThreshold)
 #define CAN_JUMP (coyoteTimer)
 
-#endif
-
 #if 1 // Animations
 
 #define ANIM_IDLE	0
@@ -258,6 +259,11 @@ void CHAR_render(unsigned int index) {
 	draw_affine_big(matrix, charsp_indices[0], 0, 0);
 }
 int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading) {
+
+	if (CHAR_ent) {
+		return 0;
+	}
+
 	memcpy(&hairColor[0], &PAL_hair[0], 12);
 	hairColor[0] = &PAL_hair[0];
 
@@ -306,6 +312,8 @@ int NORMAL_update() {
 
 	if (horz)
 		SET_FACING(horz);
+	if (forceMoveXTimer)
+		SET_FACING(forceMoveX);
 
 	unsigned int wallL = GetWall(-1, WALL_HITBOX_W);
 	unsigned int wallR = GetWall(1, WALL_HITBOX_W);
@@ -446,6 +454,12 @@ void DASH_begin() {
 	CHAR_dashTimer = Fr_DashInit + 1;
 	varJumpTimer   = 0;
 
+	if (vert > 0) {
+		SET_DUCKING(1);
+	} else {
+		SET_DUCKING(0);
+	}
+
 	return;
 
 	int i;
@@ -469,19 +483,13 @@ int DASH_update() {
 	// initialize dash direction
 	if (CHAR_dashTimer >= Fr_DashInit) {
 
-		if (vert > 0) {
-			SET_DUCKING(1);
-		} else {
-			SET_DUCKING(0);
-		}
-
 		CHAR_ent->flags[0] &= ~0xF;
 
 		if (horz) {
-			CHAR_ent->flags[0] |= ((horz < 0) ? 0x2 : 0) | 0x1;
+			CHAR_ent->flags[0] |= ((horz < 0) ? 0x2 : 0x0) | 0x1;
 		}
 		if (vert) {
-			CHAR_ent->flags[0] |= ((vert < 0) ? 0x8 : 0) | 0x4;
+			CHAR_ent->flags[0] |= ((vert < 0) ? 0x8 : 0x0) | 0x4;
 		}
 
 		// if no dash direction, set to horizontal
@@ -491,6 +499,9 @@ int DASH_update() {
 
 		// set speed
 		set_dash_speed();
+
+		if (CHAR_ent->vel_y > 0)
+			SET_DUCKING(0);
 
 		if (CHAR_ent->vel_x)
 			SET_FACING(CHAR_ent->vel_x);
@@ -622,7 +633,10 @@ void CHAR_update_anim() {
 		//
 		case CHARST_DASH:
 			{
-				anim_state = ANIM_DASH;
+				if (IS_DUCKING)
+					new_state = ANIM_CROUCH;
+				else
+					new_state = ANIM_DASH;
 				break;
 			}
 	}
@@ -631,6 +645,7 @@ void CHAR_update_anim() {
 		anim_state = new_state;
 
 		switch (anim_state) {
+			default:
 			case ANIM_IDLE:
 				load_anim_sprite_at(&SPR_madeline_idle, charsp_indices[0], SPRITE16x16, 4, 12);
 				break;
@@ -639,6 +654,9 @@ void CHAR_update_anim() {
 				break;
 			case ANIM_WALK:
 				load_anim_sprite_at(&SPR_madeline_walk, charsp_indices[0], SPRITE16x16, 6, 6);
+				break;
+			case ANIM_DASH:
+				load_sprite_at(&SPR_madeline_dash, charsp_indices[0], SPRITE16x16);
 				break;
 		}
 	}
@@ -1022,7 +1040,7 @@ unsigned int GetWall(int dir, int size) {
 		dir = 1;
 
 	int x = FIXED2INT(CHAR_ent->x) + (dir > 0 ? NORMAL_HITBOX_W : -size);
-	int h = IS_DUCKING ? (NORMAL_HITBOX_H - DUCK_DIFF) : NORMAL_HITBOX_H;
+	int h = CHAR_ent->height;
 
 	unsigned int s		= collide_rect(x, FIXED2INT(CHAR_ent->y), size, h, SOLID_COLLISION);
 	unsigned int danger = collide_rect(x, FIXED2INT(CHAR_ent->y), size, h, 0);
@@ -1842,8 +1860,13 @@ void CHAR_update(unsigned int _) {
 	// CHAR_dash_count(TOTAL_DASH_STATUS + 1);
 	//#endif
 
-	squish_x = FIXED_APPROACH(squish_x, 0x100, 0xC);
-	squish_y = FIXED_APPROACH(squish_y, 0x100, 0xC);
+	if (CHAR_ent->vel_y > F_MaxFall && CHAR_state.state != CHARST_DASH) {
+		squish_x = FIXED_APPROACH(squish_x, 0x080, 0xC);
+		squish_y = FIXED_APPROACH(squish_y, 0x180, 0xC);
+	} else {
+		squish_x = FIXED_APPROACH(squish_x, 0x100, 0xC);
+		squish_y = FIXED_APPROACH(squish_y, 0x100, 0xC);
+	}
 
 	update_statemachine(&CHAR_state);
 
@@ -1907,28 +1930,92 @@ void CHAR_update(unsigned int _) {
 		CHAR_ent->y += CHAR_ent->vel_y;
 
 	} else if (!deathAnimTimer) {
-		// Collision.  Make hit box shorter if ducking
-		int height = NORMAL_HITBOX_H - (IS_DUCKING ? DUCK_DIFF : 0);
-
-		// CHAR_ent->y += INT2FIXED(DUCK_DIFF) * (IS_DUCKING > 0);
+		// Make hit box shorter if ducking
 
 		// velocity before collision
 		int prevVelX = CHAR_ent->vel_x;
 		int prevVelY = CHAR_ent->vel_y;
+		int safeX	 = CHAR_ent->x + CHAR_ent->vel_x;
+		int safeY	 = CHAR_ent->y + CHAR_ent->vel_y;
 
 		int hit	   = entity_physics(CHAR_ent, SOLID_COLLISION);
-		int ground = collide_rect(FIXED2INT(CHAR_ent->x), FIXED2INT(CHAR_ent->y) + (IS_DUCKING ? (NORMAL_HITBOX_H - DUCK_DIFF) : NORMAL_HITBOX_H), NORMAL_HITBOX_W, 1, SOLID_COLLISION);
-		hit |= ground;
+		int ground = collide_rect(FIXED2INT(CHAR_ent->x), FIXED2INT(CHAR_ent->y) + CHAR_ent->height, NORMAL_HITBOX_W, 1, SOLID_COLLISION);
+
 		int X = (hit >> 16);
 		int Y = (hit & 0xFFFF);
-		// if ((hit >> X_COLL_SHIFT) && !speedRetentionTimer && prevVelX) {
-		// 	speedRetentionTimer = F_WallSpeedRetentionTime;
-		// 	wallSpeedRetained	= prevVelX;
-		// }
 
-		// CHAR_ent->y -= INT2FIXED(DUCK_DIFF) * (IS_DUCKING > 0);
+		if ((X || Y) && CHAR_state.state == CHARST_DASH && 0) {
+			if (prevVelX && !prevVelY) {
+				safeY = FIXED2INT(safeY);
 
-		// if collided vertically downwards on solid ground, or if ground is beneath player while moving down, on ground
+				int i;
+				for (i = 0; i < DashCornerCorrection; ++i) {
+					if (collide_rect(safeX, FIXED2INT(CHAR_ent->y) + i, NORMAL_HITBOX_W, CHAR_ent->height, SOLID_COLLISION))
+						continue;
+					// TODO: allow this to happen when invincible?
+					if (!collide_rect(safeX, FIXED2INT(CHAR_ent->y) + i, NORMAL_HITBOX_W, CHAR_ent->height, DANGER_COLLISION)) {
+						CHAR_ent->y		= CHAR_ent->y + INT2FIXED(i);
+						CHAR_ent->x		= safeX;
+						CHAR_ent->vel_x = prevVelX;
+						X				= 0;
+						break;
+					}
+				}
+				if (i == DashCornerCorrection) {
+					for (i = 0; i < DashCornerCorrection; ++i) {
+						if (collide_rect(FIXED2INT(safeX), FIXED2INT(CHAR_ent->y) - i, NORMAL_HITBOX_W, CHAR_ent->height, SOLID_COLLISION))
+							continue;
+						// TODO: allow this to happen when invincible?
+						if (!collide_rect(FIXED2INT(safeX), FIXED2INT(CHAR_ent->y) - i, NORMAL_HITBOX_W, CHAR_ent->height, DANGER_COLLISION)) {
+							CHAR_ent->y		= CHAR_ent->y - INT2FIXED(i);
+							CHAR_ent->x		= safeX;
+							CHAR_ent->vel_x = prevVelX;
+							X				= 0;
+							break;
+						}
+					}
+				}
+
+			} else if (CHAR_ent->vel_x && !CHAR_ent->vel_y) {
+				safeY = FIXED2INT(safeY);
+
+				int i;
+				for (i = 0; i < DashCornerCorrection; ++i) {
+					if (collide_rect(FIXED2INT(CHAR_ent->x) + i, safeY, NORMAL_HITBOX_W, CHAR_ent->height, SOLID_COLLISION))
+						continue;
+					// TODO: allow this to happen when invincible?
+					if (!collide_rect(FIXED2INT(CHAR_ent->x) + i, safeY, NORMAL_HITBOX_W, CHAR_ent->height, DANGER_COLLISION)) {
+						CHAR_ent->x		= CHAR_ent->x + INT2FIXED(i);
+						CHAR_ent->y		= safeY;
+						CHAR_ent->vel_y = prevVelY;
+						Y				= 0;
+						ground			= 0;
+						break;
+					}
+				}
+				if (i == DashCornerCorrection) {
+					for (i = 0; i < DashCornerCorrection; ++i) {
+						if (collide_rect(FIXED2INT(CHAR_ent->x) - i, safeY, NORMAL_HITBOX_W, CHAR_ent->height, SOLID_COLLISION))
+							continue;
+						// TODO: allow this to happen when invincible?
+						if (!collide_rect(FIXED2INT(CHAR_ent->x) - i, safeY, NORMAL_HITBOX_W, CHAR_ent->height, DANGER_COLLISION)) {
+							CHAR_ent->x		= CHAR_ent->x - INT2FIXED(i);
+							CHAR_ent->y		= safeY;
+							CHAR_ent->vel_y = prevVelY;
+							Y				= 0;
+							ground			= 0;
+							break;
+						}
+					}
+				}
+			}
+		}
+
+		if (X && !speedRetentionTimer && prevVelX) {
+			speedRetentionTimer = F_WallSpeedRetentionTime;
+			wallSpeedRetained	= prevVelX;
+		}
+		Y |= ground;
 
 		if (prevVelY >= 0 && Y) {
 			CHAR_refill_stamina();
@@ -1937,6 +2024,12 @@ void CHAR_update(unsigned int _) {
 				squish_y = 0xC0;
 			}
 			coyoteTimer = F_JumpGraceTime;
+
+			if ((CHAR_ent->flags[0] & DASH_VERT_MASK) == DASHING_DOWN) {
+				SET_DUCKING(1);
+				CHAR_ent->vel_x = FIXED_MULT(CHAR_ent->vel_x, 0x133);
+				CHAR_ent->flags[0] &= ~DASH_VERT_MASK;
+			}
 
 			if (CHAR_dashTimer <= Fr_AllowDashBack)
 				CHAR_refill_dash(0);
@@ -1964,6 +2057,9 @@ void CHAR_update(unsigned int _) {
 
 	staminaBlink += IS_TIRED;
 	lookUp += (IS_TIRED && (staminaBlink & 0x8)) * 8;
+
+	cam_x = CHAR_ent->x + 0x400;
+	cam_y = CHAR_ent->y - INT2FIXED(CHAR_ent->height) + 0x600;
 
 	int i = 0;
 	// for (; i < 8; ++i)
