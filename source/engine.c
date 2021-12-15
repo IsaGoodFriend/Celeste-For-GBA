@@ -212,7 +212,7 @@ void CheatCodes() {
 		if (revertCode == 16) {
 			revertCode = 0;
 
-			// memcpy(&hairColor[0], &hair_pal[0], 12);
+			memcpy(&hairColor[0], &PAL_hair[0], 12);
 			key_mod2(KEY_A);
 		}
 	}
@@ -234,7 +234,7 @@ void start_playing() {
 }
 
 void on_update() {
-	// CheatCodes();
+	CheatCodes();
 
 	update_statemachine(&gamestate);
 }

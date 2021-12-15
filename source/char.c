@@ -24,17 +24,16 @@ int forceMoveX, varJumpSpeed, lastClimbMove, climbNoMoveTimer, stamina, wallSpee
 
 int hairPoints[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
-COLOR hairColor[6]; // = {0x7A8D, 0x54E4, 0x08B3, 0x084B, 0x621E, 0x30D8};
+COLOR hairColor[6];
 COLOR skinStaminaColor[16];
 
 // // timers
 unsigned int varJumpTimer, zipJumpBuffer, grabBufferTimer, forceMoveXTimer, coyoteTimer, speedRetentionTimer, deathAnimTimer, dreamDashStayTimer;
 int grabbed_entity;
 
-int squish_x, squish_y;
+int squish_x, squish_y, anim_state;
 
-int speedVert,
-	speedHorz;
+int speedVert, speedHorz;
 int CHAR_PRIORITY;
 int CHAR_umbrellaOffset;
 
@@ -57,8 +56,9 @@ int CHAR_umbrellaOffset;
 #define HAIR_PART_COUNT	   4
 #define HAIR_SPRITE_OFFSET 8
 
-#define NORMAL_HITBOX_W	   8
-#define NORMAL_HITBOX_H	   11
+#define NORMAL_HITBOX_W 8
+#define NORMAL_HITBOX_H 11
+
 #define ZIP_GRAB_OFFSET	   0x400
 #define ZIP_GRAB_HEIGHT	   0x000
 #define ZIP_GRAB_DISP	   0x2
@@ -66,17 +66,47 @@ int CHAR_umbrellaOffset;
 #define ZIP_SPEED		   0x240
 #define ZIP_SLOWDOWN	   0xD0
 
+#define F_MaxRun		0x180
+#define F_RunAccel		65
+#define F_RunReduce		25
+#define F_AirMult		0xA8
+#define F_JumpGraceTime 6 // CoyoteTimer
+
+#define F_JumpSpeed			  -0x1C0
+#define F_JumpHBoost		  0xA8
+#define F_VarJumpTime		  12
+#define F_CeilingVarJumpGrace 3
+
+#define F_SuperJumpSpeed		 JumpSpeed
+#define F_SuperJumpH			 F_DashSpeed
+#define F_SuperWallJumpSpeed	 -700
+#define F_SuperWallJumpVarTime	 14
+#define F_SuperWallJumpForceTime .2f
+#define F_SuperWallJumpH		 0x2D4
+
+#define F_DashSpeed			 0x400
+#define F_EndDashSpeed		 0x200
+#define F_EndDashUpMult		 .75f
+#define Fr_DashInit			 (Fr_DashTime + Fr_DashBuffer)
+#define Fr_DashTime			 10
+#define Fr_DashBuffer		 5
+#define Fr_AllowDashBack	 (Fr_DashInit - 6)
+#define F_DashCooldown		 .2f
+#define F_DashRefillCooldown .1f
+#define DashHJumpThruNudge	 6
+#define DashCornerCorrection 4
+#define DashVFloorSnapDist	 3
+#define F_DashAttackTime	 .3f
+
+#define UpwardCornerCorrection	 4
+#define F_WallSpeedRetentionTime 6
+
+#define F_Gravity	  0x40
 #define F_MaxFall	  0x255
 #define F_FastMaxFall 0x400
 
-#define F_Gravity			0x40
 #define F_HalfGravThreshold 170
 #define F_FastMaxAccel		0x18
-
-#define F_MaxRun	380
-#define F_RunAccel	65
-#define F_RunReduce 25
-#define F_AirMult	0xA0
 
 #define F_HoldingMaxRun 70 << ACC
 #define F_HoldMinTime	.35f
@@ -91,41 +121,12 @@ int CHAR_umbrellaOffset;
 #define F_DuckSuperJumpXMult  0x140
 #define F_DuckSuperJumpYMult  0x88
 
-#define F_JumpGraceTime			 6
-#define F_JumpSpeed				 -460
-#define F_JumpHBoost			 180
-#define F_VarJumpTime			 12
-#define F_CeilingVarJumpGrace	 .05f
-#define UpwardCornerCorrection	 4
-#define F_WallSpeedRetentionTime 6
-
 #define WallJumpCheckDist	3
 #define F_WallJumpForceTime 12
 #define F_WallJumpHSpeed	560
 
 #define F_WallSlideStartMax 20 << ACC
 #define F_WallSlideTime		1.2f
-
-#define F_SuperJumpSpeed		 JumpSpeed
-#define F_SuperJumpH			 1105
-#define F_SuperWallJumpSpeed	 -700
-#define F_SuperWallJumpVarTime	 14
-#define F_SuperWallJumpForceTime .2f
-#define F_SuperWallJumpH		 (F_MaxRun + (F_JumpHBoost << 1))
-
-#define F_DashSpeed			 1020
-#define F_EndDashSpeed		 680
-#define F_EndDashUpMult		 .75f
-#define Fr_DashInit			 (Fr_DashTime + Fr_DashBuffer)
-#define Fr_DashTime			 10
-#define Fr_DashBuffer		 5
-#define Fr_AllowDashBack	 (Fr_DashInit - 6)
-#define F_DashCooldown		 .2f
-#define F_DashRefillCooldown .1f
-#define DashHJumpThruNudge	 6
-#define DashCornerCorrection 4
-#define DashVFloorSnapDist	 3
-#define F_DashAttackTime	 .3f
 
 #define F_BoostMoveSpeed 80 << ACC
 #define F_BoostTime		 .25f
@@ -227,6 +228,17 @@ int CHAR_umbrellaOffset;
 
 #endif
 
+#if 1 // Animations
+
+#define ANIM_IDLE	0
+#define ANIM_WALK	1
+#define ANIM_SKID	2
+#define ANIM_CROUCH 3
+#define ANIM_JUMP	4
+#define ANIM_DASH	5
+
+#endif
+
 int NORMAL_update();
 int DASH_update();
 void DASH_begin();
@@ -235,6 +247,7 @@ unsigned int GetWall(int, int);
 void CHAR_dash_count(int);
 
 void CHAR_render(unsigned int index) {
+	CHAR_update_anim();
 
 	AffineMatrix matrix = matrix_identity();
 
@@ -245,6 +258,11 @@ void CHAR_render(unsigned int index) {
 	draw_affine_big(matrix, charsp_indices[0], 0, 0);
 }
 int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading) {
+	memcpy(&hairColor[0], &PAL_hair[0], 12);
+	hairColor[0] = &PAL_hair[0];
+
+	anim_state = 1;
+
 	charsp_indices[0] = load_sprite(SPR_madeline_idle, SPRITE16x16);
 	charsp_indices[1] = load_sprite(SPR_hair_color, SPRITE16x16);
 	charsp_indices[2] = load_sprite(SPR_hair_outline, SPRITE16x16);
@@ -253,8 +271,8 @@ int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading
 
 	CHAR_ent = &entities[index];
 
-	squish_x = 0x080;
-	squish_y = 0x180;
+	squish_x = 0x100;
+	squish_y = 0x100;
 
 	CHAR_ent->y -= 0x300;
 	CHAR_ent->width	 = NORMAL_HITBOX_W;
@@ -270,6 +288,8 @@ int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading
 	set_update_state(&CHAR_state, DASH_update, CHARST_DASH);
 	set_begin_state(&CHAR_state, DASH_begin, CHARST_DASH);
 
+	pal_obj_mem[0] = 0x7C1F;
+
 	CHAR_state.state = CHARST_NORMAL;
 
 	load_obj_pal(PAL_madeline, 0);
@@ -279,6 +299,7 @@ int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading
 	return 0;
 }
 
+#if 1 // State machine updates
 int NORMAL_update() {
 
 	CHAR_ent->flags[0] &= ~WALL_SLIDING;
@@ -375,31 +396,34 @@ int NORMAL_update() {
 
 		// Jumping
 		if (key_pressed(KEY_A, JUMP_BUFFER)) {
-			clear_buffer(KEY_A);
 
 			if (CAN_JUMP) {
+				clear_buffer(KEY_A);
 
 				if (CHAR_dashTimer > 2 && CHAR_ent->vel_y >= 0 && CHAR_ent->vel_x != 0)
 					SuperJump(horz);
 				else
 					Jump(horz);
 			} else {
-				if (CHAR_dashTimer > 0 && (IS_DASH_DIR(DASHING_UP))) {
-					wallL = GetWall(-1, 6);
-					wallR = GetWall(1, 6);
-				}
+
+				// if (CHAR_dashTimer > 0 && (IS_DASH_DIR(DASHING_UP))) {
+				// 	wallL = GetWall(-1, 6);
+				// 	wallR = GetWall(1, 6);
+				// }
 
 				if (wallL || wallR) {
+					clear_buffer(KEY_A);
+
 					int facingLeft = FACING_DIRECTION;
 					int jumpDir	   = (wallL && wallR) ? -facingLeft : (wallL ? 1 : -1);
 
 					if (KEY_DOWN_NOW(KEY_SHOULDER) && stamina > 0 && (facingLeft == 1 ? wallL : wallR) && !(IS_RAINY && INT_ABS(CHAR_ent->vel_x) < 0x40)) {
 						ClimbJump();
-					} else if (CHAR_dashTimer <= 0 || !(IS_DASH_DIR(DASHING_UP)))
+					} else // if (CHAR_dashTimer <= 0 || !(IS_DASH_DIR(DASHING_UP)))
 						WallJump(jumpDir, horz);
-					else {
-						SuperWallJump(jumpDir);
-					}
+					// else {
+					// 	SuperWallJump(jumpDir);
+					// }
 				}
 			}
 		}
@@ -416,7 +440,7 @@ int NORMAL_update() {
 }
 void DASH_begin() {
 
-	game_freeze	   = 4;
+	game_freeze	   = 3;
 	speedHorz	   = 0;
 	speedVert	   = 0;
 	CHAR_dashTimer = Fr_DashInit + 1;
@@ -483,7 +507,7 @@ int DASH_update() {
 			if (wallR && horz == -1)
 				wallL = 0;
 
-			// SuperWallJump(wallL ? 1 : -1);
+			SuperWallJump(wallL ? 1 : -1);
 			return CHARST_NORMAL;
 
 		} else if (CAN_JUMP) {
@@ -491,7 +515,6 @@ int DASH_update() {
 			SuperJump(horz);
 
 			return CHARST_NORMAL;
-
 		} else if (wallL || wallR) {
 			clear_buffer(KEY_A);
 
@@ -513,6 +536,10 @@ int DASH_update() {
 		CHAR_ent->vel_y = F_EndDashSpeed * INT_SIGN(CHAR_ent->vel_y);
 		CHAR_ent->vel_x = F_EndDashSpeed * INT_SIGN(CHAR_ent->vel_x);
 
+		if (CHAR_ent->vel_x && CHAR_ent->vel_y) {
+			CHAR_ent->vel_x = FIXED_MULT(CHAR_ent->vel_x, 0xB5);
+			CHAR_ent->vel_y = FIXED_MULT(CHAR_ent->vel_y, 0xB5);
+		}
 		if (CHAR_ent->vel_y < 0) {
 			CHAR_ent->vel_y = FIXED_MULT(CHAR_ent->vel_y, 0xC0);
 		}
@@ -526,89 +553,96 @@ int DASH_update() {
 
 	return -1;
 }
+#endif
 
-// void CHAR_updateAnim() {
-// 	if (HEART_FREEZE)
-// 		return;
+void CHAR_update_anim() {
 
-// 	if (levelFlags & LEVELFLAG_TAS) {
-// 		anim_state = ANIM_HITBOX + IS_DUCKING;
-// 		return;
-// 	}
+	if (deathAnimTimer != 0) {
+		return;
+	}
 
-// 	switch (CHAR_state.state* (deathAnimTimer == 0)) {
-// 		case CHARST_DREAMDASH:
-// 			{
-// 				anim_state = 0;
-// 				anim_state += CHAR_ent->vel_y != 0;
-// 				anim_state += CHAR_ent->vel_x == 0;
-// 				anim_state += (CHAR_ent->vel_y > 0) << 1;
+	int new_state = 0;
+	switch (CHAR_state.state) {
+		case CHARST_DREAMDASH:
+			{
+				// anim_state = 0;
+				// anim_state += CHAR_ent->vel_y != 0;
+				// anim_state += CHAR_ent->vel_x == 0;
+				// anim_state += (CHAR_ent->vel_y > 0) << 1;
 
-// 				anim_state += ANIM_DDASH_L;
+				// anim_state += ANIM_DDASH_L;
 
-// 				break;
-// 			}
-// 		//
-// 		case CHARST_CLIMB:
-// 			{
-// 				anim_state = ANIM_CLIMB;
-// 				anim_timer = (anim_timer + 2) * (CHAR_ent->vel_y < 0 && !IS_FADING);
-// 				anim_timer &= 0x3F;
+				break;
+			}
+		//
+		case CHARST_CLIMB:
+			{
+				// anim_state = ANIM_CLIMB;
+				// anim_timer = (anim_timer + 2) * (CHAR_ent->vel_y < 0 && !IS_FADING);
+				// anim_timer &= 0x3F;
 
-// 				anim_state += anim_timer >> 4;
+				// anim_state += anim_timer >> 4;
 
-// 				break;
-// 			}
-// 		//
-// 		case ST_VIEWER:
-// 			{
-// 				anim_state = ANIM_VIEW;
+				break;
+			}
+		//
+		case ST_VIEWER:
+			{
+				// anim_state = ANIM_VIEW;
 
-// 				break;
-// 			}
-// 		//
-// 		case CHARST_ZIPLINE:
-// 			{
-// 				anim_state = ANIM_ZIPGRAB;
-// 				anim_state += horz && !IS_TIRED;
-// 				anim_state += FACING_DIRECTION == horz && !IS_TIRED;
+				break;
+			}
+		//
+		case CHARST_ZIPLINE:
+			{
+				// anim_state = ANIM_ZIPGRAB;
+				// anim_state += horz && !IS_TIRED;
+				// anim_state += FACING_DIRECTION == horz && !IS_TIRED;
 
-// 				break;
-// 			}
-// 		//
-// 		case CHARST_NORMAL:
-// 			{
+				break;
+			}
+		//
+		case CHARST_NORMAL:
+			{
+				if (IS_DUCKING) {
+					new_state = ANIM_CROUCH;
+				} else if (ON_GROUND) {
+					if (CHAR_ent->vel_x == 0) {
+						new_state = ANIM_IDLE;
+					} else if (INT_SIGN(CHAR_ent->vel_x) == horz) {
+						new_state = ANIM_WALK;
+					} else {
+						new_state = ANIM_WALK;
+					}
+				} else {
+				}
 
-// 				if (ON_GROUND) {
-// 					anim_state = ANIM_DUCK * (vert == 1);
-// 					anim_state += ANIM_LOOK * (vert == -1);
-// 					anim_state += (ANIM_WALK - anim_state) * (CHAR_ent->vel_x != 0);
+				break;
+			}
+		//
+		case CHARST_DASH:
+			{
+				anim_state = ANIM_DASH;
+				break;
+			}
+	}
 
-// 					anim_timer = (anim_timer + 1) * (anim_state == ANIM_IDLE || anim_state == ANIM_WALK);
-// 					anim_timer += anim_state == ANIM_WALK && !IS_FADING;
-// 					anim_timer %= 0x40 + ((anim_state == ANIM_WALK) * 0x20);
-// 					anim_state += anim_timer >> 4;
-// 				} else {
-// 					anim_state = ANIM_JUMP;
-// 					anim_state += CHAR_ent->vel_y > -0xC0;
-// 					anim_state += CHAR_ent->vel_y > 0x40;
+	if (new_state != anim_state) {
+		anim_state = new_state;
 
-// 					anim_state += (ANIM_CLIMB - anim_state) * ((CHAR_ent->flags[0] & WALL_SLIDING) > 0);
-
-// 					anim_timer = 0;
-// 				}
-// 				anim_state += (ANIM_DEATH - anim_state) * (deathAnimTimer != 0);
-// 				break;
-// 				break;
-// 			}
-// 		//
-// 		case CHARST_DASH:
-// 			{
-// 				anim_state = ANIM_DASH;
-// 				break;
-// 			}
-// 	}
-// }
+		switch (anim_state) {
+			case ANIM_IDLE:
+				load_anim_sprite_at(&SPR_madeline_idle, charsp_indices[0], SPRITE16x16, 4, 12);
+				break;
+			case ANIM_CROUCH:
+				load_sprite_at(&SPR_madeline_duck, charsp_indices[0], SPRITE16x16);
+				break;
+			case ANIM_WALK:
+				load_anim_sprite_at(&SPR_madeline_walk, charsp_indices[0], SPRITE16x16, 6, 6);
+				break;
+		}
+	}
+}
 // void CHAR_render(OBJ_ATTR* buffer, int camX, int camY, int* count, int pal) {
 
 // 	if (FIXED2INT(CHAR_ent->y) - camY < -0x40 ||
@@ -892,22 +926,24 @@ int DASH_update() {
 // }
 void SET_DUCKING(int value) {
 	if (value == 0 && IS_DUCKING) {
-		int hit = collide_rect(CHAR_ent->x, CHAR_ent->y - (INT2FIXED(DUCK_DIFF)), NORMAL_HITBOX_W, NORMAL_HITBOX_H, SOLID_COLLISION);
+		int hit = collide_rect(FIXED2INT(CHAR_ent->x), FIXED2INT(CHAR_ent->y) - DUCK_DIFF, NORMAL_HITBOX_W, NORMAL_HITBOX_H, SOLID_COLLISION);
 		if (hit)
 			return;
 	}
 	if (IS_DUCKING && !value) {
-		squish_x = 0xA0;
-		squish_y = 0x160;
-		load_sprite_at(&SPR_madeline_idle, charsp_indices[0], SPRITE16x16);
+		if (ON_GROUND) {
+			squish_x = 0xA0;
+			squish_y = 0x160;
+		}
 
 		CHAR_ent->height += DUCK_DIFF;
 		CHAR_ent->y -= INT2FIXED(DUCK_DIFF);
 	}
 	if (!IS_DUCKING && value) {
-		squish_x = 0x160;
-		squish_y = 0xA0;
-		load_sprite_at(&SPR_madeline_duck, charsp_indices[0], SPRITE16x16);
+		if (ON_GROUND) {
+			squish_x = 0x160;
+			squish_y = 0xA0;
+		}
 
 		CHAR_ent->height -= DUCK_DIFF;
 		CHAR_ent->y += INT2FIXED(DUCK_DIFF);
@@ -931,7 +967,7 @@ void SET_DUCKING(int value) {
 void set_hair_color() {
 
 	// change hair color
-	COLOR* palette = pal_obj_mem + 1;
+	COLOR* palette = &pal_obj_mem[1];
 
 	COLOR* lookUp = ((COLOR*)&hairColor);
 
@@ -942,8 +978,8 @@ void set_hair_color() {
 	else if (TOTAL_DASH_STATUS == 3)
 		lookUp -= 2;
 
-	memcpy(palette, lookUp, 2);
-	memcpy(palette + 1, lookUp + 1, 2);
+	palette[0] = lookUp[0];
+	palette[1] = lookUp[1];
 }
 void set_dash_speed() {
 
@@ -985,8 +1021,11 @@ unsigned int GetWall(int dir, int size) {
 	if (dir == 0)
 		dir = 1;
 
-	unsigned int s		= collide_rect(CHAR_ent->x + (dir > 0 ? INT2FIXED(NORMAL_HITBOX_W) : -INT2FIXED(size)), CHAR_ent->y, size, WALL_HITBOX_H, SOLID_COLLISION);
-	unsigned int danger = collide_rect(CHAR_ent->x + (dir > 0 ? INT2FIXED(NORMAL_HITBOX_W) : -INT2FIXED(size)), CHAR_ent->y, size, WALL_HITBOX_H, SOLID_COLLISION);
+	int x = FIXED2INT(CHAR_ent->x) + (dir > 0 ? NORMAL_HITBOX_W : -size);
+	int h = IS_DUCKING ? (NORMAL_HITBOX_H - DUCK_DIFF) : NORMAL_HITBOX_H;
+
+	unsigned int s		= collide_rect(x, FIXED2INT(CHAR_ent->y), size, h, SOLID_COLLISION);
+	unsigned int danger = collide_rect(x, FIXED2INT(CHAR_ent->y), size, h, 0);
 
 	return s && !danger;
 }
@@ -1156,8 +1195,9 @@ void SuperWallJump(int dir) {
 
 	speedVert = 12;
 
-	varJumpTimer   = F_SuperWallJumpVarTime;
-	CHAR_dashTimer = 0;
+	varJumpTimer	= F_SuperWallJumpVarTime;
+	CHAR_dashTimer	= 0;
+	forceMoveXTimer = 0;
 
 	CHAR_ent->vel_x = F_SuperWallJumpH * dir;
 	CHAR_ent->vel_y = F_SuperWallJumpSpeed;
@@ -1876,9 +1916,11 @@ void CHAR_update(unsigned int _) {
 		int prevVelX = CHAR_ent->vel_x;
 		int prevVelY = CHAR_ent->vel_y;
 
-		int hit = entity_physics(CHAR_ent, SOLID_COLLISION);
-		int XY	= (hit & 0xFFFF) | (hit >> 16);
-
+		int hit	   = entity_physics(CHAR_ent, SOLID_COLLISION);
+		int ground = collide_rect(FIXED2INT(CHAR_ent->x), FIXED2INT(CHAR_ent->y) + (IS_DUCKING ? (NORMAL_HITBOX_H - DUCK_DIFF) : NORMAL_HITBOX_H), NORMAL_HITBOX_W, 1, SOLID_COLLISION);
+		hit |= ground;
+		int X = (hit >> 16);
+		int Y = (hit & 0xFFFF);
 		// if ((hit >> X_COLL_SHIFT) && !speedRetentionTimer && prevVelX) {
 		// 	speedRetentionTimer = F_WallSpeedRetentionTime;
 		// 	wallSpeedRetained	= prevVelX;
@@ -1887,7 +1929,8 @@ void CHAR_update(unsigned int _) {
 		// CHAR_ent->y -= INT2FIXED(DUCK_DIFF) * (IS_DUCKING > 0);
 
 		// if collided vertically downwards on solid ground, or if ground is beneath player while moving down, on ground
-		if (prevVelY >= 0 && CHAR_ent->vel_y == 0) {
+
+		if (prevVelY >= 0 && Y) {
 			CHAR_refill_stamina();
 			if (coyoteTimer == 0) {
 				squish_x = 0x140;
@@ -1895,7 +1938,7 @@ void CHAR_update(unsigned int _) {
 			}
 			coyoteTimer = F_JumpGraceTime;
 
-			if (CHAR_dashTimer < Fr_AllowDashBack)
+			if (CHAR_dashTimer <= Fr_AllowDashBack)
 				CHAR_refill_dash(0);
 		} else // Not on ground
 		{
@@ -1916,7 +1959,7 @@ void CHAR_update(unsigned int _) {
 	// change hair color
 
 	set_hair_color();
-	COLOR* palette = pal_obj_mem + 3;
+	COLOR* palette = &pal_obj_mem[3];
 	COLOR* lookUp  = (COLOR*)&skinStaminaColor;
 
 	staminaBlink += IS_TIRED;
