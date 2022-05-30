@@ -1,70 +1,108 @@
-32 - 22 - 2
-
+57 - 42 - 2
 meta
 0 ; 32
-1 ; 22
+1 ; 17
 2 ; 03
-3 ; 10
+3 ; 08
 4 ; 04
-5 ; 18
+5 ; 20
 6 ; 04
 7 ; 18
-8 ; {levelIndex : lvl2 : prologue}
+8 ; {levelIndex : lvl2 }
 9 ; 255
-10 ; {levelIndex : lvl1s : prologue}
+10 ; {levelIndex : lvl1s }
 11 ; 255
 end
-
 layer - 0
-MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
-MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
-MMMMMMMMMMMMMMMMMMMMMMM    MMMMM
-MMMMMMMMMMMMMMM            MMMMM
-MMMMMMMMMM                 MMMMM
-MMMMMMMMM                  MMMMM
-MMMMMMMMM                  MMMMM
-                     OOOMMMMMMMM
-                     OOOMMMMMMMM
-                     OOOMMMMMMMM
-MMMMMMMMMM              MMMMMMMM
-MMMMMMMMMM              MMMMMMMM
-MMMMMMMM                MMMMMMMM
-MMMMM                    MMMMMMM
-MM                       MMMMMMM
-MM                       MMMMMMM
-MM            MMMM       MMMMMMM
-MM     MMM    MMMM       MMMMMMM
-MMMMMMMMMM    MMMM    MMMMMMMMMM
-MMMMMMMMMM    MMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMM     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MM          MMM            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MM                         MMMMMMMMMMMMMMM             MM
+MM                         MMMMMMMMMMMMMMM             MM
+MM                         MMMMMMMMMM                  MM
+MM                      MMMMMMMMMMMMM                  MM
+MMMMMMMMMMMMM-----      MMMMMMMMMMMMM        MMMM      MM
+MMMMMMMMMMMMM           MMMMMMMMMMMMM        MMMMMM    MM
+MMMMMMMMMMMMM           MMMMMMMMMM           MMMMMMM   MM
+MMMMMMMMMMMMM           MMMMMMMMMM           MMMMMMM   MM
+MMMMMMMM                                     MMMMMMM   MM
+MMMMM                                 MMMMM  MM  MMM   MM
+MM                                    MMMMM      MMM   MM
+MM         MMMMMMMMMM                            MMM   MM
+MM         MMMMMMMMMM                            MMM   MM
+MM         MMMMMMMMMM                            MMM   MM
+MMMMMMMMMMMMMMMMMMMMM       MMMMMMMM             MMM   MM
+MMMMMMMMMMMMMMMM            MMMMMMMM             MMM   MM
+MMMMMMMMMMMMMMMM            MMMMMMMM             MMM   MM
+MMMMMMMMMMMMMMMMAAAAA                           MMMM   MM
+MMMMMMMMMMMMMMMMMMMMM.                          MMMM   MM
+MMMMMMMMMMMMMMMMMMMMM.                          MMMM   MM
+MMMMMMMMMMMMMMMMMMMMM.                          MM     MM
+MMMMMMMMMMMMMMMMMMMMM.                                 MM
+MMMMMMMMMMMMMMMMMMMMM.                                 MM
+MMMMMMMMMMMMMMMMMMMMM.                                 MM
+MMMMMMMMMMMMMMMMMMMMM.                                 MM
+MMMMMMMMMMMMMMMMMM                           MMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMM                           MMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMM                           MMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMM                           MMMMMMMMMMMM
+MMMMMMMMMMMMMM              MMMMMMMMMM           MMMMMMMM
+MMMMMMMMMMMMMM              MMMMMMMMMM            MMMMMMM
+MMMMMMMMMMMMMM              MMMMMMMMMM            MMMMMMM
+MMMMMMMMMMMMMM         MMMMMMMMMMMMMMM            MMMMMMM
+MMMMMMMMMMMMMM       MMMMMMMMMMMMMMMMM            MMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM        MMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM       MMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 end
-
 layer - 1
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+mmmmmmmmmmmmmmm                                          
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
 end
-
 entities
 start;3;17
+strawb;14;12;{ typeglobalcount }
+strawb;24;19;{ typeglobalcount }
 end

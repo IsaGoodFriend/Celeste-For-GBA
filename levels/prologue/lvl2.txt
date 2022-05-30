@@ -1,16 +1,16 @@
 32 - 22 - 2
 
 meta
-0 ; 32
-1 ; 22
+0 ; 07
+1 ; 19
 2 ; 07
 3 ; 19
 4 ; 07
 5 ; 19
 6 ; 07
 7 ; 19
-8 ; {levelIndex : lvl3 : prologue}
-9 ; 255
+8 ; {levelIndex : lvl1 : prologue}
+9 ; {levelIndex : lvl1 : prologue}
 10 ; 255
 11 ; 255
 end
@@ -41,29 +41,30 @@ MMMMMMM    MMMMMOOO        MMMMM
 end
 
 layer - 1
-MMMMMMMMMMMM     MMM      MMMMMM
-MMMMMMMMMMMM     MMM      MMMMMM
-MMMMMMMMMMMM     MMM      MMMMMM
-MMMMMMMMMMMM     MMM      MMMMMM
-MMMMMMMMMMMM    MMMM      MMMMMM
-MMMMMMMMMMMMMM MMMMM      MMMMMM
-MMMMMMMMMMMMMMMMMMMMMM    MMMMMM
-MMMMMMM  MMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMM   MMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMM   MMMMMMMMMM
-MMMMMMMMMMMMMMMMMM     MMMMMMMMM
-        MMMMMMMMM      MMMMMMMMM
-OOOOOO       MMMM       MMMMMMMM
-OOOOOO                  MMMMMMMM
-OOOOOO                  MMMMMMMM
-OOOOOOOOO               MMMMMMMM
-OOOOOOOOOO               MMMMMMM
-OOOOOOOOOOOOOOO          MMMMMMM
-OOOOOOOOOOOOOOO            MMMMM
-OOOOOOOOOOOOOOO            MMMMM
-OOOOOOOOOOOOOOO            MMMMM
-OOOOOOOOOOOOOOO            MMMMM
+mmmmmmmmmmmm     mmm      mmmmmm
+mmmmmmmmmmmm     mmm      mmmmmm
+mmmmmmmmmmmm     mmm      mmmmmm
+mmmmmmmmmmmm     mmm      mmmmmm
+mmmmmmmmmmmm    mmmm      mmmmmm
+mmmmmmmmmmmmmm mmmmm      mmmmmm
+mmmmmmmmmmmmmmmmmmmmmm    mmmmmm
+mmmmmmm  mmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmm   mmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmm   mmmmmmmmmm
+mmmmmmmmmmmmmmmmmm     mmmmmmmmm
+        mmmmmmmmm      mmmmmmmmm
+oooooo       mmmm       mmmmmmmm
+oooooo                  mmmmmmmm
+oooooo                  mmmmmmmm
+ooooooooo               mmmmmmmm
+oooooooooo               mmmmmmm
+ooooooooooooooo          mmmmmmm
+ooooooooooooooo            mmmmm
+ooooooooooooooo            mmmmm
+ooooooooooooooo            mmmmm
+ooooooooooooooo            mmmmm
 end
 
 entities
+strawb;14;09;{ typeglobalcount }
 end

@@ -15,3 +15,7 @@ source - old/*
 BG_Externs.h
 temp/*
 exData.txt
+output.log
+release.elf
+release.gba
+release.sav

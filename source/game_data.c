@@ -1,6 +1,5 @@
 #include "game_data.h"
 #include "levels.h"
-#include "physics.h"
 #include "sprites.h"
 
 #define UI_BOUNCE_START 0x240
@@ -26,13 +25,10 @@ unsigned char STRAWB_tempColl[15];
 
 char fileName[FILENAME_LEN];
 
-int levelFlags;
-
 int strawbUI_Pos, strawbUI_Timer, strawbUI_Offset1, strawbUI_Offset2, strawbUI_speed1, strawbUI_speed2;
 
 int STRAWB_count, STRAWB_display, STRAWB_levelCount, STRAWB_levelMax;
 int STRAWB_tempCount, forceDisplay;
-unsigned int DEATH_count, DEATH_tempCount;
 
 void StrawbUI(int force) {
 

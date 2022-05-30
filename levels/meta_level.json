@@ -11,6 +11,14 @@
 					"11111111111111111111" : ["10, 9", "11, 9"],
 					"1111****************" : ["2, 2", "2, 3", "3, 2", "3, 3", "7, 2", "7, 3", "8, 2", "8, 3"],
 					
+					"0011****************" : ["11, 2", "11, 3"],
+					"1100****************" : ["14, 1", "15, 1"],
+					
+					"1000****************" : ["13, 1"],
+					"0100****************" : ["16, 1"],
+					"0010****************" : ["11, 1"],
+					"0001****************" : ["11, 4"],
+					
 					"0101****************" : ["4, 4", "5, 10", "9, 4"],
 					"1001****************" : ["1, 4", "1, 10", "6, 4"],
 					"0110****************" : ["4, 1", "5, 6", "9, 1"],
@@ -18,7 +26,7 @@
 					
 					"0111****************" : ["5, 7", "5, 8", "5, 9"],
 					"1011****************" : ["1, 7", "1, 8", "1, 9"],
-					"1101****************" : ["2, 10", "3, 10", "3, 10"],
+					"1101****************" : ["2, 10", "3, 10", "4, 10"],
 					"1110****************" : ["2, 6", "3, 6", "4, 6"],	
 					
 					"********************" : ["1, 1"]
@@ -37,24 +45,26 @@
 			}
 		}
 	},
+	"global" : {
+		"EntityIndex": {
+			"start" : 0,
+			"strawberry" : 1,
+			"strawb" : 1,
+		}
+	},
 	"Prologue" : {
 		"LevelPacks" : ["prologue"],
 		
-		"EntityIndex" : {
-			"start" : 0
-		},
 		"Wrapping" : {
 			"M" : {
 				"Palette" : 0,
 				"Tileset" : "dirt",
-				"CollisionType" : 1,
 				"Connections" : ["M", "N", "O"],
 				"MappingCopy" : "Template/1"
 			},
 			"N" : {
 				"Palette" : 0,
 				"Tileset" : "dirt",
-				"CollisionType" : 1,
 				"Connections" : ["N"],
 				"MappingCopy" : "Template/1"
 			},
@@ -64,16 +74,37 @@
 				"Connections" : ["M", "N", "O"],
 				"MappingCopy" : "Template/1"
 			},
+			"-" : {
+				"Palette" : 3,
+				"Tileset" : "platform_prologue",
+				"CollisionShape" : 1,
+				"Connections" : ["-"],
+				"Mapping" : [
+					"1, 0", "-1, 0",
+				],
+				"MappingSpecial" : [
+					"1, 0; MNO",
+					"-1, 0; MNO",
+				],
+				"TileMapping" : {
+					"**01" : ["0, 0"],
+					"**10" : ["6, 0"],
+					
+					"01**" : ["1, 0"],
+					"10**" : ["2, 0"],
+					"11**" : ["3, 0", "4, 0", "5, 0"],
+				}
+			},
 			"m" : {
-				"Palette" : 1,
+				"Palette" : 4,
 				"Tileset" : "dirt",
-				"Connections" : ["m"],
+				"Connections" : ["m", "o"],
 				"MappingCopy" : "Template/1"
 			},
 			"o" : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
-				"Connections" : ["o"],
+				"Palette" : 5,
+				"Tileset" : "snow",
+				"Connections" : ["m", "o"],
 				"MappingCopy" : "Template/1"
 			},
 			"R" : {
@@ -88,38 +119,62 @@
 				"Connections" : ["Y"],
 				"MappingCopy" : "Template/1"
 			},
-			"-" : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
-				"Connections" : ["-", "M", "N", "O"],
-				"MappingCopy" : "Template/1"
-			},
+			
 			"V" : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
+				"Palette" : 3,
+				"CollisionType" : 2,
+				"CollisionShape" : 2,
+				"Tileset" : "spikes_normal",
 				"Connections" : ["V", "M", "N", "O"],
-				"MappingCopy" : "Template/1"
+				"Mapping" : [
+					"1, 0"
+				],
+				"TileMapping" : {
+					"*" : ["1, 2"],
+				}
 			},
 			"A" : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
+				"Palette" : 3,
+				"CollisionType" : 2,
+				"CollisionShape" : 3,
+				"Tileset" : "spikes_normal",
 				"Connections" : ["A", "M", "N", "O"],
-				"MappingCopy" : "Template/1"
+				"Mapping" : [
+					"1, 0"
+				],
+				"TileMapping" : {
+					"*" : ["1, 0"],
+				}
 			},
 			"," : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
+				"Palette" : 3,
+				"CollisionType" : 3,
+				"CollisionShape" : 4,
+				"Tileset" : "spikes_normal",
 				"Connections" : [",", "M", "N", "O"],
-				"MappingCopy" : "Template/1"
+				"Mapping" : [
+					"1, 0"
+				],
+				"TileMapping" : {
+					"*" : ["0, 1"],
+				}
 			},
 			"." : {
-				"Palette" : 1,
-				"Tileset" : "dirt",
+				"Palette" : 3,
+				"CollisionType" : 4,
+				"CollisionShape" : 5,
+				"Tileset" : "spikes_normal",
 				"Connections" : [".", "M", "N", "O"],
-				"MappingCopy" : "Template/1"
+				"Mapping" : [
+					"1, 0"
+				],
+				"TileMapping" : {
+					"*" : ["2, 1"],
+				}
 			},
 			"S" : {
 				"Tileset" : "NULL",
+				"CollisionType" : 5,
 			},
 		}
 	}

@@ -1,11 +1,10 @@
-#ifndef __DATA__
-#define __DATA__
+#pragma once
 
 #include "math.h"
 #include <string.h>
 #include <tonc.h>
 
-#define GS_LEVEL		0
+#define GS_LEVEL_SELECT 0
 #define GS_PLAYING		1
 #define GS_PAUSED		2
 #define GS_INTRO		3
@@ -41,25 +40,8 @@
 
 #define LEVEL_UNLOCKED_IDX 53
 
-#define LEVELFLAG_BSIDE		0x0001
-#define LEVELFLAG_COREMODE	0x0002
-#define LEVELFLAG_RAINY		0x0004
-#define LEVELFLAG_CHALLENGE 0x0008
-#define MUSICAL_LEVEL		0x0010
-#define LEVELFLAG_BEGINNING 0x0020
-
-#define IS_CORE_HOT		   (levelFlags & LEVELFLAG_COREMODE)
-#define IS_RAINY		   (levelFlags & LEVELFLAG_RAINY)
-#define CHALLENGE_MODE	   (levelFlags & LEVELFLAG_CHALLENGE)
-#define NOTE_BLOCKS_ACTIVE (levelFlags & MUSICAL_LEVEL)
-#define RECORD_DEATHS	   !(levelFlags & LEVELFLAG_BEGINNING)
-
 extern unsigned char STRAWB_tempColl[15];
 
 #define FILENAME_LEN 12
 extern char fileName[FILENAME_LEN];
 extern const char emptyFileName[FILENAME_LEN];
-
-extern int levelFlags;
-
-#endif

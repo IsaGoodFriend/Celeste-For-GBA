@@ -1,6 +1,5 @@
 #pragma once
-
-#include "core.h"
+#include "entities.h"
 
 #define CHARST_NORMAL	 0
 #define CHARST_CLIMB	 1
@@ -36,35 +35,6 @@ extern int CHAR_umbrellaOffset;
 
 extern int saveX, saveY;
 
-int CHAR_init(unsigned int index, unsigned char* data, unsigned char* is_loading);
-void CHAR_update(unsigned int);
-void CHAR_render(unsigned int);
-
-// void CHAR_update();
-// void CHAR_save_loc();
-
-// void CHAR_change_state(int value);
-
-// void CHAR_dash_start();
-// void CHAR_climb_start();
-// void CHAR_zip_start();
-// void CHAR_dreamdash_start();
-
-// void CHAR_update_normal();
-// void CHAR_update_dreamdash();
-// void CHAR_update_climb();
-// void CHAR_update_dash();
-// void CHAR_update_zip();
-// void CHAR_update_viewer();
-
-// void CHAR_end_normal();
-
-// void CHAR_dash_count(int value);
-// void CHAR_stop_zipline();
-// void CHAR_Die();
-// void CHAR_Restart();
-// void CHAR_refill_dash(char v);
-// void set_hair_color();
-// int IsInWater();
-// void BubbleParticle(int offX, int rng);
-// void JumpParticle(int offX, int rng);
+#define ISDEAD_MASK	  0x00000200
+#define WALL_SLIDING  0x00000400
+#define ONGROUND_MASK 0x00000800

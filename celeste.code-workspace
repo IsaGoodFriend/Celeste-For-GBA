@@ -17,7 +17,12 @@
 			"levels.h": "c",
 			"typeinfo": "cpp",
 			"graphics.h": "c",
-			"state_machine.h": "c"
+			"state_machine.h": "c",
+			"entities.h": "c",
+			"core.h": "c",
+			"level_handler.h": "c",
+			"sprites.h": "c",
+			"entity_func.h": "c"
 		}
 	}
 }
